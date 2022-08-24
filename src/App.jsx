@@ -7,9 +7,11 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <StartPage />
+        <StartPage />
         <Routes>
+          <Route index element={<StartPage />}></Route>
           <Route path="/skills" element={<SkillsPage />}></Route>
+
         </Routes>
       </BrowserRouter>
     </div>
