@@ -1,4 +1,4 @@
-import SkillContent from "../components/skillpagecomponents/skillcontent";
+import SkillContent from "../components/skillpagecomponents/skillcontent"
 
 export default function SkillsPage() {
   return <SkillContent />;

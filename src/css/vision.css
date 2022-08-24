@@ -1,0 +1,15 @@
+.visionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.visionTextContainer {
+    display: flex;
+    justify-content: center;
+}
+
+h5 {
+    width: 50rem;
+}
+
