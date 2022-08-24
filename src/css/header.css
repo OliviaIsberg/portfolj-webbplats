@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap');
+
+.header {
+  padding: 1rem 4rem;
+  border-bottom: 0.5px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h1 {
+  font-family: 'Goldman', cursive;
+  font-size: 3rem;
+}
+
+.linksContainer {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem;
+}
+
+.link {
+  text-decoration: none;
+  margin: 1.5rem 2rem;
+  color: black;
+  font-family: 'Istok Web', sans-serif;
+  font-size: 24px;
+}
+
+.signInButton {
+  color: black;
+  font-family: 'Istok Web', sans-serif;
+  background-color: white;
+  font-size: 20px;
+  border-radius: 0.6rem;
+  border: 2px solid black;
+}
