@@ -1,8 +1,5 @@
-import SkillContent from "../components/skillpagecomponents/SkillContent"
+import SkillContent from '../components/skillpagecomponents/skillcontent';
 
-export default function SkillsPage () {
-
-    return (
-        <SkillContent/>
-    )
+export default function SkillsPage() {
+  return <SkillContent />;
 }
