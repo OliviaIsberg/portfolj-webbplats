@@ -17,24 +17,24 @@ function Footer() {
             <Grid item xs={12} sm={4}>
               <Link underline="none" href="/" color="black">
                 <Typography variant="body1" mt="1rem">
-                  Find Us
+                  Hitta oss
                 </Typography>
               </Link>
               <Link underline="none" href="/" color="black">
                 <Typography variant="body1" mt=".2rem">
-                  About Agili
+                  Om Agili
                 </Typography>
               </Link>
             </Grid>
             <Grid item xs={12} sm={4}>
               <Link underline="none" href="/" color="black">
                 <Typography variant="body1" mt="1rem" color="black">
-                  Contact Us
+                  Kontakta oss
                 </Typography>
               </Link>
               <Link underline="none" href="/">
                 <Typography variant="body1" mt=".2rem" color="black">
-                  Read More About Our Skills
+                  Läs mer om våra erfarenheter
                 </Typography>
               </Link>
             </Grid>
