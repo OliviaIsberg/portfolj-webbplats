@@ -3,6 +3,8 @@
     height: 20vh;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 @media (max-width: 800px) {
