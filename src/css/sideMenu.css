@@ -1,0 +1,30 @@
+.scrumMaster {
+    background-color: #9EC7EE;
+    width: 10rem;
+    height: 2rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.Designer {
+    background-color: #F6B1B1 ;
+    width: 10rem;
+    height: 2rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.Developer {
+    background-color:#E3FFE6 ;
+    width: 10rem;
+    height: 2rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+
+}
+
+
