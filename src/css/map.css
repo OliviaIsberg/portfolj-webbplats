@@ -1,6 +1,18 @@
 .map-container {
-    width: 40%;
+    width: 50%;
     height: 20vh;
     margin-left: auto;
     margin-right: auto;
 }
+
+@media (max-width: 800px) {
+    .map-container {
+     width: 80%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .map-container {
+     width: 100%;
+    }
+  }
