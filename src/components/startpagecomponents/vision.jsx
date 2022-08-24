@@ -5,12 +5,12 @@ export default function Vision() {
     return (
         <div className="visionContainer">
             <div className="visionTextContainer">
-                <h5>Vi på Agili anser att alla har rätt till en schysst digital närvaro.
-                    Vår vision är att tillgodose alla våra kunders önskemål - nya som gamla, stora som små.
-                    Till skillnad från liknande företag i branschen lägger vi stor vikt på enkelhet, transparens och
-                    kvalité.</h5>
+                <h5>At Agili we believe that everyone has the right to a nice digital presence.
+                    Our vision is to satisfy all our customer' wishes - new and old, big and small.
+                    Unlike similar companies in the industry, we place a great value on simplicity,
+                    transparency and quality.</h5>
             </div>
-            <Button variant="contained">Boka ett möte</Button>
+            <Button variant="contained">Book a meeting</Button>
         </div>
     )
 }
