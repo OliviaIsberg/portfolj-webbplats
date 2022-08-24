@@ -7,15 +7,15 @@ function Header() {
       <h1>AGILI</h1>
       <div className="linksContainer">
         <Link className="link" to="/">
-          Home
+          Hem
         </Link>
         <Link className="link" to="skills">
           Skills
         </Link>
         <Link className="link" to="">
-          Contact
+          Kontakt
         </Link>
-        <button className="signInButton">Sign in</button>
+        <button className="signInButton">Logga in</button>
       </div>
     </header>
   );
