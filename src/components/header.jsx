@@ -1,5 +1,7 @@
 import '../css/header.css';
 import { Link } from 'react-router-dom';
+import { Box } from '@mui/system';
+import MenuIcon from '@mui/icons-material/Menu';
 
 function Header() {
   return (
@@ -16,6 +18,9 @@ function Header() {
           Kontakt
         </Link>
         <button className="signInButton">Logga in</button>
+        <Box display={{ xs: 'block', sm: 'none', md: 'none', lg: 'none' }}>
+          <MenuIcon fontSize="large" />
+        </Box>
       </div>
     </header>
   );
