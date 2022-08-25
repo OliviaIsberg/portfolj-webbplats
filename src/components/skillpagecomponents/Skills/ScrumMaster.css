@@ -48,16 +48,20 @@ margin-bottom: 1rem;
 }
 
 .expert-pic-div {
-    border: #9EC7EE .2rem solid;
-    border-radius: 50%;
-    margin: .5rem;
-    width: 50%;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   width: 50%;
 }
 
-/* .expert-pic {
-    background-size: cover;   
-    background-image: url(../../../Assets/profile-picture.png);
-} */
+.expert-pic {
+    border: #9EC7EE .1rem solid;
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+   /*  background-size: cover;   
+    background-image: url(../../../Assets/profile-picture.png); */
+}
 
 .expert-desc {
     margin: 1rem;

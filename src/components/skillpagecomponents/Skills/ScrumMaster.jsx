@@ -1,6 +1,7 @@
 
-import { Box, Typography } from "@mui/material"
+import { Box, Button, Typography, CardMedia } from "@mui/material"
 import "./ScrumMaster.css"
+ 
 
 
 export default function ScrumMaster() {
@@ -39,14 +40,14 @@ export default function ScrumMaster() {
             <Typography variant="h6">Our Experts</Typography>
             <div className="expert-description">
                 <div className="expert-pic-div">
-                    <div className="expert-pic"></div>
+                <CardMedia src="../../../Assets/profile-picture" />
                 </div>
                 <div className="expert-desc">
                     <Typography variant="subtitle1">FIRSTNAME LASTNAME</Typography>
                     <Typography variant="body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Typography>
+                    <Button sx={{bgcolor: "#E3FFE6", color: "black", marginTop: ".5rem"}}>Contact X </Button>
                 </div>
             </div>
-            
         </Box>
         </Box>
        
