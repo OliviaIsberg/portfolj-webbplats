@@ -1,0 +1,12 @@
+.contactForm {
+    width: 50vw;
+    height: 50vh;
+    background-color: aqua;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.contactMember {
+    margin-bottom: 2rem;
+}
