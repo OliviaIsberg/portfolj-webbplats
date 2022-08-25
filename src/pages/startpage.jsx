@@ -1,19 +1,13 @@
 import Map from '../components/startpagecomponents/map';
-import Header from '../components/header'
-import Vision from "../components/startpagecomponents/vision";
-import Gallery from "../components/startpagecomponents/gallery";
-import Footer from "../components/footer";
-
+import Vision from '../components/startpagecomponents/vision';
+import Gallery from '../components/startpagecomponents/gallery';
 
 function StartPage() {
   return (
     <div>
-      <Header />
       <Vision />
       <Gallery />
       <Map />
-      <Footer />
-
     </div>
   );
 }
