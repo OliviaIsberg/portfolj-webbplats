@@ -1,5 +1,3 @@
-
-
 import ScrumMaster from "./Skills/ScrumMaster"
 
 export default function SkillContent() {

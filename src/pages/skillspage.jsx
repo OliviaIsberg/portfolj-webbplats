@@ -1,6 +1,5 @@
 import SkillContent from "../components/skillpagecomponents/SkillContent"
 
-
 export default function SkillsPage () {
 
     return (
@@ -8,3 +7,4 @@ export default function SkillsPage () {
         <SkillContent/>
     )
 }
+

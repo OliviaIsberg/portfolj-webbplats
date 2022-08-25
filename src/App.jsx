@@ -1,15 +1,18 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import StartPage from './pages/startpage';
-import SkillsPage from './pages/SkillsPage';
+import SkillsPage from './pages/skillspage';
+import Layout from './components/layout';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <StartPage />
         <Routes>
-          <Route path="/skills" element={<SkillsPage />}></Route>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<StartPage />}></Route>
+            <Route path="/skills" element={<SkillsPage />}></Route>
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>
