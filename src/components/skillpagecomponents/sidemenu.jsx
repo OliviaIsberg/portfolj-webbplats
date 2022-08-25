@@ -1,12 +1,18 @@
 import '../../css/sideMenu.css'
 
+
 export default function SideMenu() {
+    // const [isShown, setIsShown] = useState(true)
+
+    // const handleClick = event => {
+    //     setIsShown(current => !current)
+    // }
+
+
+
 
     return (
-        <div className="container">
-            <div className="scrumMaster" >Scrum master</div>
-            <div className="Developer" >Developer </div>
-            <div className="Designer" >Designer </div>
+        <div >
         </div>
     );
 }

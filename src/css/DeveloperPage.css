@@ -5,3 +5,57 @@
     display: flex;
     justify-content: center;
 }
+
+.BorderDesignerPage {
+    width: 40rem;
+    height: 40rem;
+    border: 1px solid #F6B1B1;
+}
+.BorderScrumPage {
+    width: 40rem;
+    height: 40rem;
+    border: 1px solid #F6B1B1;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.scrumMaster {
+    background-color: #9EC7EE;
+    width: 10rem;
+    height: 2rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.Designer {
+    background-color: #F6B1B1 ;
+    width: 10rem;
+    height: 2rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.Developer {
+    background-color:#E3FFE6 ;
+    width: 10rem;
+    height: 2rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.Developer:hover {
+    width: 100%;
+}
+.Designer:hover {
+    width: 100%;
+}
+.scrumMaster:hover {
+    width: 100%;
+}
