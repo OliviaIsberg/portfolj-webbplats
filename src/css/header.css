@@ -36,3 +36,9 @@
   border-radius: 0.6rem;
   border: 2px solid black;
 }
+
+@media screen and (max-width: 896px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+}
