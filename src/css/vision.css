@@ -13,3 +13,17 @@ h5 {
     width: 50rem;
 }
 
+@media screen and (max-width: 1024px) {
+    h5 {
+        width: 40rem;
+    }
+
+
+}
+
+@media screen and (max-width: 640px) {
+    h5 {
+        width: 20rem;
+    }
+
+}
