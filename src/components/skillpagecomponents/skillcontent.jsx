@@ -1,3 +1,9 @@
+
+
 export default function SkillContent() {
-  return <div>hej</div>;
+  return (<div>
+    <p>hej</p>
+
+  </div>
+  );
 }

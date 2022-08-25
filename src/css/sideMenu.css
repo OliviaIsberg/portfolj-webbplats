@@ -1,3 +1,8 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
 .scrumMaster {
     background-color: #9EC7EE;
     width: 10rem;
@@ -27,4 +32,12 @@
 
 }
 
-
+.Developer:hover {
+    width: 100%;
+}
+.Designer:hover {
+    width: 100%;
+}
+.scrumMaster:hover {
+    width: 100%;
+}

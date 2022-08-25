@@ -1,0 +1,7 @@
+.BorderDeveloperPage {
+    width: 40rem;
+    height: 40rem;
+    border: 1px solid #9EC7EE;
+    display: flex;
+    justify-content: center;
+}

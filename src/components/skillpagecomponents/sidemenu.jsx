@@ -5,8 +5,8 @@ export default function SideMenu() {
     return (
         <div className="container">
             <div className="scrumMaster" >Scrum master</div>
-            <div className="Designer" >Developer </div>
-            <div className="Developer" >Designer </div>
+            <div className="Developer" >Developer </div>
+            <div className="Designer" >Designer </div>
         </div>
     );
 }
