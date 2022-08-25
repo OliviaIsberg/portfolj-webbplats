@@ -1,10 +1,10 @@
 import Form from "../components/contactpagecomponents/form";
 
-function Form () {
+function FormPage () {
 
     return (
         <Form/>
     )
 }
 
-export default Form;
+export default FormPage;

@@ -12,7 +12,7 @@ function Header() {
         <Link className="link" to="skills">
           Skills
         </Link>
-        <Link className="link" to="">
+        <Link className="link" to="contact">
           Kontakt
         </Link>
         <button className="signInButton">Logga in</button>
