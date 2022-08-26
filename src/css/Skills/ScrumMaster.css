@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap');
+
+.skill-content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 2rem; */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+   border: #9EC7EE 1rem solid; 
+   font-family: 'Istok Web', sans-serif; 
+}
+
+.title {   
+margin-bottom: 1rem;
+font-family: 'Istok Web', sans-serif;
+}
+
+.description {
+    text-align: center;
+    font-family: 'Istok Web', sans-serif;
+
+}
+
+.tool-box {
+    text-align: center;
+    margin-top: 3rem;
+    background-color: #9EC7EE;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.tools {
+    display: flex;
+    flex-direction: row;
+}
+
+.tool {margin: 1rem;}
+
+.expert-box {
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   width: 100%;
+    margin-top: 3rem;
+}
+
+.expert-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}
+
+.expert-pic-div {
+   display: flex;
+   justify-content: center;
+    width: 50%;
+}
+
+
+
+  .expert-pic {
+    background-color: #9EC7EE;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: -20%;
+    padding: 1rem;
+  }
+
+
+.expert-desc {
+    margin: 1rem;
+    width: 50%;
+    text-align: left;
+}

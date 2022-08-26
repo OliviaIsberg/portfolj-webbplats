@@ -1,6 +1,7 @@
 
 import { Box, Button, Typography, CardMedia } from "@mui/material"
-import "./ScrumMaster.css"
+import "../../../css/Skills/ScrumMaster.css"
+import profilePicture from "../../../Assets/profile-picture.png"
  
 
 
@@ -40,7 +41,11 @@ export default function ScrumMaster() {
             <Typography variant="h6">Our Experts</Typography>
             <div className="expert-description">
                 <div className="expert-pic-div">
-                <CardMedia src="../../../Assets/profile-picture" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                <CardMedia className="expert-pic" component="img" src={profilePicture} sx={{width: "10rem"}}/>
                 </div>
                 <div className="expert-desc">
                     <Typography variant="subtitle1">FIRSTNAME LASTNAME</Typography>
