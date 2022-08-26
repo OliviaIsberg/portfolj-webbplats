@@ -1,4 +1,6 @@
 import ScrumMaster from "./Skills/ScrumMaster"
+import Designers from "./Skills/Designers"
+import Developers from "./Skills/Developers"
 
 export default function SkillContent() {
 
@@ -6,7 +8,11 @@ export default function SkillContent() {
     rätt innehåll beroende på vad användaren väljer */
 
     return (
-    <ScrumMaster/>
+        <>
+    {/* <ScrumMaster/>
+    <Designers/>
+    <Developers/> */}
+    </>
        
     )
 }

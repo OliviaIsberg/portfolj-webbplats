@@ -1,19 +1,17 @@
 
 import { Box, Button, Typography, CardMedia } from "@mui/material"
-import "../../../css/Skills/ScrumMaster.css"
+import "../../../css/Skills/Designers.css"
 import profilePicture from "../../../Assets/profile-picture.png"
-import SideMenu from "../sidemenu"
  
 
 
-export default function ScrumMaster() {
-    
+export default function Designers() {
+
 
     return (
-        
         <Box className="skill-content">
         <Box className="description">
-            <Typography variant="h5" className="title">Scrum Master</Typography>
+            <Typography variant="h5" className="title">Designers</Typography>
             <Typography variant="body1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id pulvinar lacus, quis varius ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras augue lorem, viverra vel luctus sed, tincidunt vel mauris. Quisque et velit a dolor bibendum sodales at eu
             </Typography>
@@ -50,8 +48,8 @@ export default function ScrumMaster() {
                 <CardMedia className="expert-pic" component="img" src={profilePicture} sx={{width: "10rem"}}/>
                 </div>
                 <div className="expert-desc">
-                    <Typography variant="subtitle1">FIRSTNAME LASTNAME</Typography>
-                    <Typography variant="body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Typography>
+                    <Typography  variant="subtitle1">FIRSTNAME LASTNAME</Typography>
+                    <Typography className="NameOnExpert" variant="body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Typography>
                     <Button sx={{bgcolor: "#E3FFE6", color: "black", marginTop: ".5rem"}}>Contact X </Button>
                 </div>
             </div>

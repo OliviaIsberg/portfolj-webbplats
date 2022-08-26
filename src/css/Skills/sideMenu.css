@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.buttons {
+    width: 20%;
+}
+
+.scrumMaster {
+    background-color: #9EC7EE;
+    width: 10rem;
+    height: 2rem;
+    margin: 1rem;
+    border-radius: 5rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Designer {
+    background-color: #F6B1B1 ;
+    width: 10rem;
+    height: 2rem;
+    margin: 1rem;
+    border-radius: 5rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Developer {
+    background-color:#E3FFE6 ;
+    width: 10rem;
+    height: 2rem;
+    margin: 1rem;
+    border-radius: 5rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Developer:hover {
+    width: 100%;
+}
+.Designer:hover {
+    width: 100%;
+}
+.scrumMaster:hover {
+    width: 100%;
+}
+
+@media(max-width: 900px){
+    .container {
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+    
+    }
+    .buttons {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
