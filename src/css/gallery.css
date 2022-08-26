@@ -1,0 +1,15 @@
+.galleryContainer {
+    display: flex;
+   align-items: center;
+    flex-direction: column;
+}
+
+h3 {
+    margin-top: 5rem;
+}
+
+.rollsBoxes {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
