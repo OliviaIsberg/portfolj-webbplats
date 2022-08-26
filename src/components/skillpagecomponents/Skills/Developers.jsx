@@ -1,19 +1,17 @@
 
 import { Box, Button, Typography, CardMedia } from "@mui/material"
-import "../../../css/Skills/ScrumMaster.css"
+import "../../../css/Skills/Developers.css"
 import profilePicture from "../../../Assets/profile-picture.png"
-import SideMenu from "../sidemenu"
  
 
 
-export default function ScrumMaster() {
-    
+export default function Developers() {
+
 
     return (
-        
         <Box className="skill-content">
         <Box className="description">
-            <Typography variant="h5" className="title">Scrum Master</Typography>
+            <Typography variant="h5" className="title">Developers</Typography>
             <Typography variant="body1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id pulvinar lacus, quis varius ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras augue lorem, viverra vel luctus sed, tincidunt vel mauris. Quisque et velit a dolor bibendum sodales at eu
             </Typography>
