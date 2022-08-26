@@ -8,9 +8,9 @@ export default function Gallery() {
             <h3>Roller</h3>
 
             <div className="rollsBoxes">
-            <Box component="Button" sx={{width: 300, height: 300, marginLeft: 4, backgroundColor: 'lightblue'}}>Scrum master</Box>
-            <Box component="Button" sx={{width: 300, height: 300, marginLeft: 4, backgroundColor: 'pink'}}>Designer</Box>
-            <Box component="Button" sx={{width: 300, height: 300, marginLeft: 4, backgroundColor: 'lightgreen'}}>Utvecklare</Box>
+            <Box component="Button" sx={{ height: 300, marginLeft: 4, backgroundColor: 'lightblue'}}>Scrum master</Box>
+            <Box component="Button" sx={{ height: 300, marginLeft: 4, backgroundColor: 'pink'}}>Designer</Box>
+            <Box component="Button" sx={{ height: 300, marginLeft: 4, backgroundColor: 'lightgreen'}}>Utvecklare</Box>
             </div>
         </div>
     )

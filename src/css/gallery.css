@@ -13,3 +13,28 @@ h3 {
     flex-direction: row;
     align-content: center;
 }
+
+button {
+    width: 200px;
+}
+
+
+@media screen and (max-width: 1024px) {
+   button {
+       width: 170px;
+   }
+
+
+}
+
+@media screen and (max-width: 640px) {
+    .rollsBoxes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button {
+        width: 250px;
+        margin-bottom: 2rem;
+    }
+}
