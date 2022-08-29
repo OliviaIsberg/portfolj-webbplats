@@ -64,13 +64,21 @@ function Header() {
             alignItems: 'center',
           }}
         >
-          <Link className="headerLink" to="/">
+          <Link onClick={() => setOpen(false)} className="headerLink" to="/">
             Hem
           </Link>
-          <Link className="headerLink" to="skills">
+          <Link
+            onClick={() => setOpen(false)}
+            className="headerLink"
+            to="skills"
+          >
             Skills
           </Link>
-          <Link className="headerLink" to="contact">
+          <Link
+            onClick={() => setOpen(false)}
+            className="headerLink"
+            to="contact"
+          >
             Kontakt
           </Link>
         </Box>
