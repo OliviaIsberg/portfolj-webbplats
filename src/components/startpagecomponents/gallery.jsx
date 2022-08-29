@@ -1,6 +1,6 @@
 import '../../css/gallery.css';
-import {Link} from "react-router-dom";
-import {Box} from "@mui/material";
+import { Link } from "react-router-dom";
+import { Box } from "@mui/material";
 
 export default function Gallery() {
     return (
@@ -8,9 +8,15 @@ export default function Gallery() {
             <h3>Roller</h3>
 
             <div className="rollsBoxes">
-            <Box component="Button" sx={{ height: 300, marginLeft: 4, backgroundColor: 'lightblue'}}>Scrum master</Box>
-            <Box component="Button" sx={{ height: 300, marginLeft: 4, backgroundColor: 'pink'}}>Designer</Box>
-            <Box component="Button" sx={{ height: 300, marginLeft: 4, backgroundColor: 'lightgreen'}}>Utvecklare</Box>
+                <Link to="skills">
+                    <Box component="Button" sx={{ height: 300, marginLeft: 4, backgroundColor: 'lightblue'}}>Scrum master</Box>
+                </Link>
+                <Link to="skills">
+                    <Box component="Button" sx={{ height: 300, marginLeft: 4, backgroundColor: 'pink'}}>Designer</Box>
+                </Link>
+                <Link to="skills">
+                    <Box component="Button" sx={{ height: 300, marginLeft: 4, backgroundColor: 'lightgreen'}}>Utvecklare</Box>
+                </Link>
             </div>
         </div>
     )
