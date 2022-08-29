@@ -12,7 +12,7 @@ export default function Designers() {
           className="title"
           sx={{ marginBottom: "1rem" }}
         >
-          Designers
+          Designer
         </Typography>
         <Typography variant="body1">
           Med Rosanna och Sara i spetsen kan ni förvänta er en förstklassig
@@ -24,7 +24,7 @@ export default function Designers() {
       </Box>
       <Box className="tool-expert-container">
         <Box className="tool-box">
-          <Typography variant="h4">Our Tools</Typography>
+          <Typography variant="h4">Verktyg</Typography>
           <div className="tools">
             <div className="tool">
               <Typography variant="h5">Figma</Typography>
@@ -37,8 +37,8 @@ export default function Designers() {
             <div className="tool">
               <Typography variant="h5">Adobe Photoshop</Typography>
               <Typography variant="body1">
-                Med Photoshop förbättrar vi bilder, designa, retuschera och
-                skapa montage. Photoshop är gigantiskt, men låt dig inte
+                Med Photoshop förbättrar vi bilder, designar, retuscherar och
+                skapar montage. Photoshop är gigantiskt, men låt dig inte
                 skrämmas, Rosanna och Sara har stenkoll på denna härliga
                 djungel.
               </Typography>
@@ -63,7 +63,7 @@ export default function Designers() {
           </div>
         </Box>
         <Box className="expert-box">
-          <Typography variant="h4">Our Experts</Typography>
+          <Typography variant="h4">Experter</Typography>
           <div className="expert-description">
             <div className="expert-pic-div">
               <CardMedia
@@ -76,7 +76,7 @@ export default function Designers() {
             <div className="expert-desc">
               <Typography variant="subtitle1">SARA LINDQVIST</Typography>
               <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              "Design är intelligens som görs synlig."
               </Typography>
               <Button
                 sx={{
@@ -86,7 +86,7 @@ export default function Designers() {
                   marginTop: ".5rem",
                 }}
               >
-                Contact Sara{" "}
+                Kontakta Sara{" "}
               </Button>
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function Designers() {
             <div className="expert-desc">
               <Typography variant="subtitle1">ROSANNA PISTONE</Typography>
               <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              ”Jag strävar efter två saker i design: enkelhet och tydlighet. Bra design föds ur dessa två."
               </Typography>
               <Button
                 sx={{
@@ -112,7 +112,7 @@ export default function Designers() {
                   marginTop: ".5rem",
                 }}
               >
-                Contact Rosanna{" "}
+                Kontakta Rosanna{" "}
               </Button>
             </div>
           </div>

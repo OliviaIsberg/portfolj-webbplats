@@ -13,7 +13,7 @@ export default function Developers() {
           className="title"
           sx={{ marginBottom: "1rem" }}
         >
-          Developers
+          Utvecklare
         </Typography>
         <Typography variant="body1">
           Med vårt härliga developer team skapas funktionella plattformar
@@ -24,7 +24,7 @@ export default function Developers() {
       </Box>
       <Box className="tool-expert-container">
         <Box className="tool-box">
-          <Typography variant="h4">Our Tools</Typography>
+          <Typography variant="h4">Verktyg</Typography>
           <div className="tools">
             <div className="tool">
               <Typography variant="h5">JavaScript</Typography>
@@ -70,7 +70,7 @@ export default function Developers() {
           </div>
         </Box>
         <Box className="expert-box">
-          <Typography variant="h4">Our Experts</Typography>
+          <Typography variant="h4">Experter</Typography>
           <div className="expert-description">
             <div className="expert-pic-div">
               <CardMedia
@@ -83,7 +83,7 @@ export default function Developers() {
             <div className="expert-desc">
               <Typography variant="subtitle1">MAX ANDERSSON</Typography>
               <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              "Programmering är att bryta en stor omöjlig uppgift i flera mycket små möjliga uppgifter."
               </Typography>
               <Button
                 sx={{
@@ -93,7 +93,7 @@ export default function Developers() {
                   marginTop: ".5rem",
                 }}
               >
-                Contact Simon{" "}
+                Kontakta Max{" "}
               </Button>
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function Developers() {
             <div className="expert-desc">
               <Typography variant="subtitle1">OLIVIA ISBERG</Typography>
               <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                "Först lösa problemet. Skriv sedan koden."
               </Typography>
               <Button
                 sx={{
@@ -119,7 +119,7 @@ export default function Developers() {
                   marginTop: ".5rem",
                 }}
               >
-                Contact Simon{" "}
+                Kontakta Olivia{" "}
               </Button>
             </div>
           </div>
@@ -135,7 +135,7 @@ export default function Developers() {
             <div className="expert-desc">
               <Typography variant="subtitle1">ANNA ÖZMEHAK</Typography>
               <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              "Programmering är en konstart som slår tillbaka."
               </Typography>
               <Button
                 sx={{
@@ -145,7 +145,7 @@ export default function Developers() {
                   marginTop: ".5rem",
                 }}
               >
-                Contact Simon{" "}
+                Kontakta Anna{" "}
               </Button>
             </div>
           </div>

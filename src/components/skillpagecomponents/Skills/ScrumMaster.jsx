@@ -1,6 +1,6 @@
 import { Box, Button, Typography, CardMedia } from "@mui/material";
 import "../../../css/Skills/Skills.css";
-import profileRosanna from "../../../Assets/rosanna.png";
+import profileSimon from "../../../Assets/simon.png";
 
 export default function ScrumMaster() {
   return (
@@ -11,7 +11,7 @@ export default function ScrumMaster() {
           className="title"
           sx={{ marginBottom: "1rem" }}
         >
-          Scrum Master
+          Scrummästare
         </Typography>
         <Typography variant="body1">
           Med hjälp av vår Scrum Master Simon kommer teamet få all hjälp de
@@ -22,7 +22,7 @@ export default function ScrumMaster() {
       </Box>
       <Box className="tool-expert-container">
         <Box className="tool-box">
-          <Typography variant="h4">Our Tools</Typography>
+          <Typography variant="h4">Verktyg</Typography>
           <div className="tools">
             <div className="tool">
               <Typography variant="h5">Agila metoder</Typography>
@@ -66,20 +66,20 @@ export default function ScrumMaster() {
           </div>
         </Box>
         <Box className="expert-box">
-          <Typography variant="h4">Our Experts</Typography>
+          <Typography variant="h4">Experter</Typography>
           <div className="expert-description">
             <div className="expert-pic-div">
               <CardMedia
                 className="expert-pic"
                 component="img"
-                src={profileRosanna}
+                src={profileSimon}
                 sx={{ width: "10rem" }}
               />
             </div>
             <div className="expert-desc">
               <Typography variant="subtitle1">SIMON ERIKSSON</Typography>
               <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                "Det viktiga är inte din process. Det viktiga är din process för att förbättra din process."
               </Typography>
               <Button
                 sx={{
@@ -89,7 +89,7 @@ export default function ScrumMaster() {
                   marginTop: ".5rem",
                 }}
               >
-                Contact Simon{" "}
+                Kontakta Simon{" "}
               </Button>
             </div>
           </div>
