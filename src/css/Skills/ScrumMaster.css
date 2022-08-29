@@ -85,6 +85,13 @@
       margin-top: 2rem;
       margin-bottom: 2rem;
     }
+    .skill-content{
+     overflow: scroll;
+   
+     }
+     .skill-content{
+      height: 30rem;
+     } 
   }
 
 @media (max-width: 650px) {
@@ -99,4 +106,5 @@
   .expert-desc p {
     text-align: center;
   }
+ 
 }
