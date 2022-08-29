@@ -26,7 +26,9 @@ function Header() {
           />
         </Box>
 
-        <h1>AGILI</h1>
+        <Link style={{ textDecoration: 'none' }} to="/">
+          <h1>AGILI</h1>
+        </Link>
         <div className="linksContainer">
           <Box display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block' }}>
             <Link className="headerLink" to="/">
