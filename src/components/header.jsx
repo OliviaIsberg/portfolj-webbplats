@@ -43,7 +43,7 @@ function Header() {
           backdropFilter: 'blur(5px)',
           flexGrow: 1,
           position: 'absolute',
-          width: '100vw',
+          width: '100%',
           top: 0,
           bottom: 0,
           zIndex: 1,
