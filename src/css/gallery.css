@@ -1,40 +1,40 @@
 .galleryContainer {
-    display: flex;
-   align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10rem;
 }
 
 h3 {
-    margin-top: 5rem;
+  color: white;
+  margin-bottom: 2rem;
 }
 
 .rollsBoxes {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
 }
 
 button {
-    width: 200px;
+  width: 200px;
 }
 
-
 @media screen and (max-width: 1024px) {
-   button {
-       width: 170px;
-   }
-
-
+  button {
+    width: 170px;
+  }
 }
 
 @media screen and (max-width: 640px) {
-    .rollsBoxes {
-        display: flex;
-        flex-direction: column;
-    }
+  .rollsBoxes {
+    display: flex;
+    flex-direction: column;
+  }
 
-    button {
-        width: 250px;
-        margin-bottom: 2rem;
-    }
+  button {
+    width: 250px;
+    margin-bottom: 2rem;
+  }
 }
