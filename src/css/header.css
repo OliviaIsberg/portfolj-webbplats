@@ -54,3 +54,9 @@
     text-shadow: -4px 2px 20px black;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .header {
+    padding: 1rem 0.5rem;
+  }
+}

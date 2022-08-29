@@ -20,9 +20,9 @@ function Header() {
           }}
         >
           <MenuIcon
-            sx={{ color: '#ffffff' }}
+            sx={{ color: '#ffffff', fontSize: '3rem' }}
             onClick={() => setOpen(!open)}
-            fontSize="large"
+            // fontSize="large"
           />
         </Box>
 
