@@ -46,13 +46,19 @@ function Form() {
                 Contact a member
               </Typography>
               <FormControl fullWidth>
-                <InputLabel id="memberSelectLabel">Member</InputLabel>
+                <InputLabel id="memberSelectLabel" sx={{color: "white",}}>Member</InputLabel>
                 <Select
                     labelId="memberSelectLabel"
                     id="memberSelect"
                     value={member}
                     label="Member"
                     onChange={handleChange}
+                    sx={{
+                      color: "white",
+                      backgroundColor: "black",
+                      border: "1px solid #23BE99",
+                      borderRadius: "20px",
+                    }}
                 >
                     <MenuItem value={"Simon"}>Simon Eriksson</MenuItem>
                     <MenuItem value={"Sara"}>Sara Lindqvist</MenuItem>
