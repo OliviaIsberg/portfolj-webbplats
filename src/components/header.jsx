@@ -44,7 +44,7 @@ function Header() {
       </Box>
       <Box
         sx={{
-          backdropFilter: 'blur(5px)',
+          backdropFilter: 'blur(10px)',
           flexGrow: 1,
           position: 'absolute',
           width: '100%',
