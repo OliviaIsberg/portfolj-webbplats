@@ -39,6 +39,9 @@
   font-size: 20px;
   border-radius: 0.6rem;
   border: 2px solid black;
+  margin: 0;
+  width: 8rem;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 896px) {
