@@ -20,9 +20,9 @@ function Header() {
           }}
         >
           <MenuIcon
-            sx={{ color: '#ffffff' }}
+            sx={{ color: '#ffffff', fontSize: '3rem' }}
             onClick={() => setOpen(!open)}
-            fontSize="large"
+            // fontSize="large"
           />
         </Box>
 
@@ -44,7 +44,7 @@ function Header() {
       </Box>
       <Box
         sx={{
-          backdropFilter: 'blur(5px)',
+          backdropFilter: 'blur(10px)',
           flexGrow: 1,
           position: 'absolute',
           width: '100%',
