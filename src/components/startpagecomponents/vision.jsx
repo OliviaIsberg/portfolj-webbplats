@@ -1,4 +1,5 @@
-import "../../css/vision.css";
+import '../../css/vision.css';
+import { Link } from 'react-router-dom';
 
 export default function Vision() {
   return (
@@ -13,7 +14,9 @@ export default function Vision() {
           lägger vi stor vikt på enkelhet, transparens och kvalité.
         </p>
       </div>
-      <button>BOKA ETT MÖTE</button>
+      <Link to="contact">
+        <button className="bookingButton">BOKA ETT MÖTE</button>
+      </Link>
     </div>
   );
 }
