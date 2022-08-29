@@ -68,7 +68,7 @@ return (
     <div className="container" > 
         <div className="buttons">
 
-            <button onClick={handleClickScrum} className="scrumMaster" >Scrum master</button>
+            <button onClick={handleClickScrum} className="scrumMaster" >Scrum Master</button>
             <button onClick={handleClickDeveloper} className="Developer" >Developer </button>
             <button onClick={handleClickDesign} className="Designer" >Designer </button>
         </div>
