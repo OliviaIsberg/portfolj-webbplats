@@ -14,3 +14,12 @@
 .textfield_label {
     color: white !important;
 }
+
+.center {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.center:hover {
+    background-color: #1b6856;
+}
