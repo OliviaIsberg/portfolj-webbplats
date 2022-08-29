@@ -6,7 +6,11 @@
   border-bottom: 0.5px solid black;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #fff8f8;
+  height: 8rem;
+  z-index: 2;
+  position: relative;
 }
 
 .header h1 {
@@ -35,4 +39,10 @@
   font-size: 20px;
   border-radius: 0.6rem;
   border: 2px solid black;
+}
+
+@media screen and (max-width: 896px) {
+  .header {
+    padding: 1rem 2rem;
+  }
 }
