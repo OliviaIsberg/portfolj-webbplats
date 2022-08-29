@@ -21,8 +21,8 @@ export default function SideMenu() {
     const handleClickScrum = event => {
         setIsShowScrum(current => !current)
     }
-    let menuRef = useRef();
 
+    let menuRef = useRef();
 
 
     useEffect(() => {
