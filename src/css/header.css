@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap");
 
 .header {
   padding: 1rem 4rem;
-  border-bottom: 0.5px solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff8f8;
-  height: 8rem;
+  background-color: black;
+  height: 3rem;
   z-index: 2;
   position: relative;
 }
 
 .header h1 {
-  font-family: 'Goldman', cursive;
-  font-size: 3rem;
+  font-family: "Goldman", cursive;
+  font-size: 2rem;
+  color: white;
 }
 
 .linksContainer {
@@ -26,19 +26,20 @@
 
 .link {
   text-decoration: none;
-  margin: 1.5rem 2rem;
-  color: black;
-  font-family: 'Istok Web', sans-serif;
-  font-size: 24px;
+  margin: 2rem;
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
 }
 
 .signInButton {
-  color: black;
-  font-family: 'Istok Web', sans-serif;
+  width: 100%;
   background-color: white;
-  font-size: 20px;
-  border-radius: 0.6rem;
-  border: 2px solid black;
+  color: black;
+  padding: 10px;
+  margin: 8px 8px;
+  border: none;
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 896px) {
