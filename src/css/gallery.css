@@ -2,17 +2,19 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 300px;
+  margin: 10rem;
 }
 
 h3 {
-  margin-top: 5rem;
+  color: white;
+  margin-bottom: 2rem;
 }
 
 .rollsBoxes {
   display: flex;
-  flex-direction: row;
-  align-content: center;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
 }
 
 button {
