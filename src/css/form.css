@@ -11,6 +11,6 @@
     margin-bottom: 2rem;
 }
 
-.newcss {
-    color:black;
+.textfield_label {
+    color: white !important;
 }
