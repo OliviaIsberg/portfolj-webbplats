@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap');
 
 .header {
   padding: 1rem 4rem;
@@ -13,7 +13,7 @@
 }
 
 .header h1 {
-  font-family: "Goldman", cursive;
+  font-family: 'Goldman', cursive;
   font-size: 2rem;
   color: white;
 }
@@ -24,7 +24,7 @@
   /* margin: 1.5rem; */
 }
 
-.link {
+.headerLink {
   text-decoration: none;
   margin: 2rem;
   color: white;

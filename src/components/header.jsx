@@ -19,19 +19,23 @@ function Header() {
             alignItems: 'center',
           }}
         >
-          <MenuIcon onClick={() => setOpen(!open)} fontSize="large" />
+          <MenuIcon
+            sx={{ color: '#ffffff' }}
+            onClick={() => setOpen(!open)}
+            fontSize="large"
+          />
         </Box>
 
         <h1>AGILI</h1>
         <div className="linksContainer">
           <Box display={{ xs: 'none', sm: 'none', md: 'block', lg: 'block' }}>
-            <Link className="link" to="/">
+            <Link className="headerLink" to="/">
               Hem
             </Link>
-            <Link className="link" to="skills">
+            <Link className="headerLink" to="skills">
               Skills
             </Link>
-            <Link className="link" to="">
+            <Link className="headerLink" to="contact">
               Kontakt
             </Link>
           </Box>
@@ -60,13 +64,13 @@ function Header() {
             alignItems: 'center',
           }}
         >
-          <Link className="link" to="/">
+          <Link className="headerLink" to="/">
             Hem
           </Link>
-          <Link className="link" to="skills">
+          <Link className="headerLink" to="skills">
             Skills
           </Link>
-          <Link className="link" to="">
+          <Link className="headerLink" to="contact">
             Kontakt
           </Link>
         </Box>
