@@ -1,5 +1,6 @@
 import '../../css/vision.css';
 import {Button} from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function Vision() {
     return (
@@ -10,7 +11,9 @@ export default function Vision() {
                     Till skillnad från liknande företag i branschen lägger vi stor vikt på enkelhet, transparens och
                     kvalité.</h5>
             </div>
-            <Button variant="contained">Boka ett möte</Button>
+            <Link to="contact">
+                <Button variant="contained">Boka ett möte</Button>
+            </Link>
         </div>
     )
 }
