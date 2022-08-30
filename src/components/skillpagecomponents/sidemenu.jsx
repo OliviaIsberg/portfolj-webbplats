@@ -8,19 +8,23 @@ export default function SideMenu() {
         <div className="container" >
             <div className="buttons">
 
-                <Link to="ScrumPage" >
+                <Link to="/skills/ScrumPage" >
                     <button className="scrumMaster" >Scrum Master</button>
                 </Link>
-                <button className="Developer" >Developer </button>
-                <button className="Designer" >Designer </button>
+                <Link to="/skills/DeveloperPage" >
+                    <button className="Developer" >Developer </button>
+                </Link>
+                <Link to="/skills/DesignPage" >
+                    <button className="Designer" >Designer </button>
+                </Link>
             </div>
         </div>
 
     )
 
+
+
 }
-
-
 
 
 
