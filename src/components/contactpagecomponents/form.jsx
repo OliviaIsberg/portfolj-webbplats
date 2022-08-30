@@ -62,6 +62,7 @@ function Form() {
           </InputLabel>
           <Select
             required
+
             labelId="memberSelectLabel"
             id="memberSelect"
             value={member}

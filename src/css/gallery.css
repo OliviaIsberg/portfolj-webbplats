@@ -1,15 +1,66 @@
 .galleryContainer {
-    display: flex;
-   align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* margin: 10rem; */
 }
 
 h3 {
-    margin-top: 5rem;
+  color: white;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .rollsBoxes {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+}
+
+.galleryLink {
+  text-decoration: none;
+  color: white;
+  border-bottom: 2px solid #23be99;
+  text-transform: uppercase;
+}
+
+.divLink {
+  width: 300px;
+  height: 200px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  box-shadow: -1px 0px 15px -2px white;
+}
+
+@media screen and (max-width: 1024px) {
+  button {
+    width: 170px;
+  }
+  .rollsBoxes {
     display: flex;
-    flex-direction: row;
-    align-content: center;
+    flex-direction: column;
+    padding: 2rem 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .divLink {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  button {
+    width: 250px;
+    margin-bottom: 2rem;
+  }
+
+  .divLink {
+    width: 300px;
+  }
 }
