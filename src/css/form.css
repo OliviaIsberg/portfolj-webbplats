@@ -8,7 +8,7 @@
 }
 
 .contactMember {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem !important;
 }
 
 .textfield_label {
