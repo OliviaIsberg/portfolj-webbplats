@@ -8,20 +8,21 @@ export default function Gallery() {
       <h3>Våra kompetenser på Agili</h3>
 
       <div className="rollsBoxes">
+
         <div className="divLink">
-          <Link className="galleryLink" to="skills">
+          <Link className="galleryLink" to="/skills/DesignPage">
             Designer
           </Link>
         </div>
 
         <div className="divLink">
-          <Link className="galleryLink" to="skills">
+          <Link className="galleryLink" to="/skills/ScrumPage">
             Scrummästare
           </Link>
         </div>
 
         <div className="divLink">
-          <Link className="galleryLink" to="skills">
+          <Link className="galleryLink" to="/skills/DevoloperPage">
             Utvecklare
           </Link>
         </div>
