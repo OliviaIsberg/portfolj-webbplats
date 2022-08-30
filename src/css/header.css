@@ -3,36 +3,60 @@
 
 .header {
   padding: 1rem 4rem;
-  border-bottom: 0.5px solid black;
   display: flex;
   justify-content: space-between;
-  background-color: #fff8f8;
+  align-items: center;
+  background-color: black;
+  height: 3rem;
+  z-index: 2;
+  position: relative;
 }
 
 .header h1 {
   font-family: 'Goldman', cursive;
   font-size: 3rem;
+  color: white;
 }
 
 .linksContainer {
   display: flex;
   align-items: center;
-  margin: 1.5rem;
+  /* margin: 1.5rem; */
 }
 
-.link {
+.headerLink {
   text-decoration: none;
-  margin: 1.5rem 2rem;
-  color: black;
-  font-family: 'Istok Web', sans-serif;
-  font-size: 24px;
+  margin: 2rem;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
 
 .signInButton {
-  color: black;
-  font-family: 'Istok Web', sans-serif;
-  background-color: white;
-  font-size: 20px;
-  border-radius: 0.6rem;
-  border: 2px solid black;
+  width: 8rem;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  margin: 8px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+
+  .headerLink {
+    font-size: 1.5rem;
+    text-shadow: -4px 2px 20px black;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header {
+    padding: 1rem 0.5rem;
+  }
 }

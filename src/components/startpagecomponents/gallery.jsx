@@ -1,17 +1,32 @@
 import '../../css/gallery.css';
-import {Link} from "react-router-dom";
-import {Box} from "@mui/material";
+import { Link } from 'react-router-dom';
+import { Box } from '@mui/material';
 
 export default function Gallery() {
-    return (
-        <div className="galleryContainer">
-            <h3>Roller</h3>
+  return (
+    <div className="galleryContainer">
+      <h3>Våra kompetenser på Agili</h3>
 
-            <div className="rollsBoxes">
-            <Box component="Button" sx={{width: 300, height: 300, marginLeft: 4, backgroundColor: 'lightblue'}}>Scrum master</Box>
-            <Box component="Button" sx={{width: 300, height: 300, marginLeft: 4, backgroundColor: 'pink'}}>Designer</Box>
-            <Box component="Button" sx={{width: 300, height: 300, marginLeft: 4, backgroundColor: 'lightgreen'}}>Utvecklare</Box>
-            </div>
+      <div className="rollsBoxes">
+
+        <div className="divLink">
+          <Link className="galleryLink" to="/skills/DesignPage">
+            Designer
+          </Link>
         </div>
-    )
+
+        <div className="divLink">
+          <Link className="galleryLink" to="/skills/ScrumPage">
+            Scrummästare
+          </Link>
+        </div>
+
+        <div className="divLink">
+          <Link className="galleryLink" to="/skills/DevoloperPage">
+            Utvecklare
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 }
