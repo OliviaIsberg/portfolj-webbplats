@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap');
 
 .header {
   padding: 1rem 4rem;
@@ -13,8 +13,8 @@
 }
 
 .header h1 {
-  font-family: "Goldman", cursive;
-  font-size: 2rem;
+  font-family: 'Goldman', cursive;
+  font-size: 3rem;
   color: white;
 }
 
@@ -24,26 +24,39 @@
   /* margin: 1.5rem; */
 }
 
-.link {
+.headerLink {
   text-decoration: none;
   margin: 2rem;
   color: white;
-  font-size: 15px;
+  font-size: 1.2rem;
   text-transform: uppercase;
 }
 
 .signInButton {
-  width: 100%;
-  background-color: white;
-  color: black;
+  width: 8rem;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
   padding: 10px;
   margin: 8px 8px;
-  border: none;
   border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
-@media screen and (max-width: 896px) {
+@media screen and (max-width: 900px) {
   .header {
     padding: 1rem 2rem;
+  }
+
+  .headerLink {
+    font-size: 1.5rem;
+    text-shadow: -4px 2px 20px black;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header {
+    padding: 1rem 0.5rem;
   }
 }

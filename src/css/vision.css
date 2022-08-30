@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .visionContainer {
   display: flex;
@@ -6,6 +6,7 @@
   justify-content: center;
   margin-left: 15rem;
   margin-top: 10rem;
+  margin-bottom: 8rem;
 }
 
 .visionTextContainer {
@@ -18,24 +19,46 @@
   margin: 0;
   padding-top: 1rem;
   font-size: 68px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-h2 {
+.visionTextContainer h2 {
   color: #23be99;
   font-size: 16px;
   margin: 0;
 }
 
-p {
+.bookingButton {
+  width: 200px;
+  color: white;
+  background-color: black;
+  border: 1px solid #23be99;
+  padding: 1rem;
+}
+
+
+.visionText {
   width: 30rem;
   padding-bottom: 1rem;
   font-size: 15px;
 }
 
-button {
-  color: white;
-  background-color: black;
-  border: 1px solid #23be99;
-  padding: 1rem;
+@media screen and (max-width: 900px) {
+  .visionContainer {
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .visionText {
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .visionTextContainer {
+    margin: 0 2rem;
+  }
+  .visionText {
+    width: 20rem;
+  }
 }

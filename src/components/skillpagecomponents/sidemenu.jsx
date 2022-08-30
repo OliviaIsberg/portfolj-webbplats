@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import "../../css/Skills/sideMenu.css"
 
@@ -19,12 +20,9 @@ export default function SideMenu() {
                 </Link>
             </div>
         </div>
-
     )
 
-
-
-}
+  }
 
 
 
