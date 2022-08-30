@@ -30,7 +30,7 @@ function Form() {
   };
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component="main" maxWidth="xs" sx={{ marginBottom: '8.5rem' }}>
       <Box
         sx={{
           marginTop: 8,
@@ -62,7 +62,6 @@ function Form() {
           </InputLabel>
           <Select
             required
-
             labelId="memberSelectLabel"
             id="memberSelect"
             value={member}
@@ -84,7 +83,17 @@ function Form() {
             <MenuItem value={'Rossana'}>Rossana Pistone</MenuItem>
           </Select>
         </FormControl>
-        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+        <Box
+          component="form"
+          noValidate
+          onSubmit={handleSubmit}
+          sx={{
+            mt: 3,
+            display: 'flex',
+            alignItems: 'center',
+            flexDirection: 'column',
+          }}
+        >
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -173,7 +182,7 @@ function Form() {
                 multiline
                 rows={3}
                 maxRows={6}
-                inputProps={{ style: { color: "white" } }}
+                inputProps={{ style: { color: 'white' } }}
                 sx={{
                   color: 'white!important',
                   backgroundColor: 'black',
@@ -192,7 +201,6 @@ function Form() {
           </Grid>
           <Button
             type="submit"
-            fullWidth
             variant="contained"
             className="white"
             sx={{

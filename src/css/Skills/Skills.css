@@ -1,22 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap');
 
 .skill-content {
   display: flex;
   flex-direction: column;
   padding: 3rem;
   border: #23be99 0.2rem solid;
-  font-family: "Istok Web", sans-serif;
+  font-family: 'Istok Web', sans-serif;
   background-color: black;
   color: white;
+  margin: 1rem;
 }
 
 .title {
-  font-family: "Istok Web", sans-serif;
+  font-family: 'Istok Web', sans-serif;
   text-decoration: overline #23be99;
 }
 
 .description {
-  font-family: "Istok Web", sans-serif;
+  font-family: 'Istok Web', sans-serif;
   flex-direction: column;
   align-items: center;
   width: 20rem;

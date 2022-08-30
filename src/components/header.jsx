@@ -34,7 +34,7 @@ function Header() {
             <Link className="headerLink" to="/">
               Hem
             </Link>
-            <Link className="headerLink" to="skills">
+            <Link className="headerLink" to="/skills/Scrumpage">
               Skills
             </Link>
             <Link className="headerLink" to="contact">
