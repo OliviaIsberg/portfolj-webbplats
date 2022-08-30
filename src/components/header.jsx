@@ -52,7 +52,7 @@ function Header() {
           width: '100%',
           top: 0,
           bottom: 0,
-          zIndex: 1,
+          zIndex: 2,
         }}
         display={
           open ? { xs: 'block', sm: 'block', md: 'none', lg: 'none' } : 'none'
