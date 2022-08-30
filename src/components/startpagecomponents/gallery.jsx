@@ -15,7 +15,7 @@ export default function Gallery() {
             backgroundColor: "#4E4E4E",
           }}
         >
-          <Link to="skills">Designer</Link>
+          <Link to="DesignPage">Designer</Link>
         </Box>
 
         <Box
@@ -25,7 +25,7 @@ export default function Gallery() {
             backgroundColor: "#4E4E4E",
           }}
         >
-          <Link to="skills">Scrummästare</Link>
+          <Link to="ScrumPage">Scrummästare</Link>
         </Box>
 
         <Box
@@ -35,7 +35,7 @@ export default function Gallery() {
             backgroundColor: "#4E4E4E",
           }}
         >
-          <Link to="skills">Utvecklare</Link>
+          <Link to="DeveloperPage">Utvecklare</Link>
         </Box>
       </div>
     </div>

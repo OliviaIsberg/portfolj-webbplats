@@ -1,97 +1,26 @@
+import { Link } from "react-router-dom";
 import "../../css/Skills/sideMenu.css"
-import { useState, useEffect, useRef } from "react"
-import ScrumMaster from "./Skills/ScrumMaster"
-import Designers from "./Skills/Designers"
-import Developers from "./Skills/Developers"
+
 
 export default function SideMenu() {
 
-    const [isShowDesign, setIsShowDesign] = useState(false)
-    const [isShowDeve, setIsShowDeve] = useState(false)
-    const [isShowScrum, setIsShowScrum] = useState(false)
+    return (
+        <div className="container" >
+            <div className="buttons">
 
-
-    const handleClickDeveloper = event => {
-        setIsShowDeve(current => !current)
-    }
-    const handleClickDesign = event => {
-        setIsShowDesign(current => !current)
-    }
-    const handleClickScrum = event => {
-        setIsShowScrum(current => !current)
-    }
-    let menuRef = useRef();
-
-    useEffect(() => {
-        let handler = (event) => {
-            if (!menuRef.current.contains(event.target)) {
-                setIsShowDesign(false)
-            }
-        }
-        document.addEventListener("mousedown", handler);
-
-        return () => {
-            document.removeEventListener("mousedown", handler);
-        }
-    });
-
-    useEffect(() => {
-        let handler = (event) => {
-            if (!menuRef.current.contains(event.target)) {
-                setIsShowDeve(false)
-            }
-        }
-        document.addEventListener("mousedown", handler);
-
-        return () => {
-            document.removeEventListener("mousedown", handler);
-        }
-    });
-
-    useEffect(() => {
-        let handler = (event) => {
-            if (!menuRef.current.contains(event.target)) {
-                setIsShowScrum(false)
-            }
-        }
-        document.addEventListener("mousedown", handler);
-
-        return () => {
-            document.removeEventListener("mousedown", handler);
-        }
-    });
-
-
-
-
-return (
-    <div className="container" > 
-        <div className="buttons">
-
-            <button onClick={handleClickScrum} className="scrumMaster" >Scrum Master</button>
-            <button onClick={handleClickDeveloper} className="Developer" >Developer </button>
-            <button onClick={handleClickDesign} className="Designer" >Designer </button>
+                <Link to="ScrumPage" >
+                    <button className="scrumMaster" >Scrum Master</button>
+                </Link>
+                <button className="Developer" >Developer </button>
+                <button className="Designer" >Designer </button>
+            </div>
         </div>
-         
-           { isShowDesign && (
-            <div ref={menuRef}>  
-                <Designers />
-            </div>
-           )}
-             { isShowDeve && (
-            <div ref={menuRef}>  
-                <Developers />
-            </div>
-           )}
-             { isShowScrum && (
-            <div ref={menuRef}>  
-                <ScrumMaster />
-            </div>
-           )}
-        
 
+    )
 
-    </div>
-);
 }
+
+
+
+
 
