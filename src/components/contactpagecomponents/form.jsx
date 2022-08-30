@@ -172,6 +172,7 @@ function Form() {
                 multiline
                 rows={3}
                 maxRows={6}
+                inputProps={{ style: { color: "white" } }}
                 sx={{
                   color: 'white!important',
                   backgroundColor: 'black',
@@ -192,6 +193,7 @@ function Form() {
             type="submit"
             fullWidth
             variant="contained"
+            className="white"
             sx={{
               mt: 3,
               mb: 2,
@@ -201,7 +203,7 @@ function Form() {
               border: '1px solid #23BE99',
               borderRadius: '20px',
               outline: 'none',
-              input: { color: 'white' },
+              input: { color: 'white!important' },
               inputLabel: { color: 'white' },
               textfield_label: { color: 'white' },
               '& .MuiOutlinedInput-notchedOutline': {
