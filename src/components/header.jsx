@@ -72,7 +72,7 @@ function Header() {
           <Link
             onClick={() => setOpen(false)}
             className="headerLink"
-            to="skills"
+            to="/skills/Scrumpage"
           >
             Skills
           </Link>
