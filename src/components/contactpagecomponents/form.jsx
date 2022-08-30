@@ -61,6 +61,8 @@ function Form() {
             Member
           </InputLabel>
           <Select
+            required
+
             labelId="memberSelectLabel"
             id="memberSelect"
             value={member}
@@ -146,6 +148,33 @@ function Form() {
                 InputLabelProps={{ className: 'textfield_label' }}
                 sx={{
                   color: 'white',
+                  backgroundColor: 'black',
+                  border: '1px solid #23BE99',
+                  borderRadius: '20px',
+                  outline: 'none',
+                  input: { color: 'white' },
+                  inputLabel: { color: 'white' },
+                  textfield_label: { color: 'white' },
+                  '& .MuiOutlinedInput-notchedOutline': {
+                    border: 'none',
+                  },
+                }}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                fullWidth
+                id="message"
+                label="Message"
+                name="message"
+                autoComplete="message.."
+                InputLabelProps={{ className: 'textfield_label' }}
+                multiline
+                rows={3}
+                maxRows={6}
+                sx={{
+                  color: 'white!important',
                   backgroundColor: 'black',
                   border: '1px solid #23BE99',
                   borderRadius: '20px',
