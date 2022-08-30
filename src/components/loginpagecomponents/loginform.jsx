@@ -42,93 +42,10 @@ function Form() {
               }}
             >
               <Typography component="h1" variant="h5" className="contactMember" sx={{color: "white"}}>
-                Vad kan vi hjälpa dig med?
+                Vill du registera dig?
               </Typography>
-              <FormControl fullWidth>
-                <InputLabel id="memberSelectLabel" 
-                sx={{
-                  color: "white",
-                  '&.${inputLabelClasses.shrink}': {
-                    // set the color of the label when shrinked (usually when the TextField is focused)
-                    color: "orange"
-                }}}
-                >Member</InputLabel>
-                <Select
-                    labelId="memberSelectLabel"
-                    id="memberSelect"
-                    value={member}
-                    label="Member"
-                    onChange={handleChange}
-                    sx={{
-                      color: "white",
-                      backgroundColor: "black",
-                      border: "1px solid #23BE99",
-                      borderRadius: "20px",
-                      outline: "none",
-                      
-                    }}
-                >
-                    <MenuItem value={"Simon"}>Simon Eriksson</MenuItem>
-                    <MenuItem value={"Sara"}>Sara Lindqvist</MenuItem>
-                    <MenuItem value={"Olivia"}>Olivia Isberg</MenuItem>
-                    <MenuItem value={"Max"}>Max Andersson</MenuItem>
-                    <MenuItem value={"Anna"}>Anna Özmehak</MenuItem>
-                    <MenuItem value={"Rossana"}>Rossana Pistone</MenuItem>
-                </Select>
-              </FormControl>
               <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
                 <Grid container spacing={2}>
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      autoComplete="given-name"
-                      name="firstName"
-                      required
-                      fullWidth
-                      id="firstName"
-                      label="First Name"
-                      autoFocus
-                      InputLabelProps={{className: "textfield_label"}}
-                      sx={{
-                        color: "white!important",
-                        backgroundColor: "black",
-                        border: "1px solid #23BE99",
-                        borderRadius: "20px",
-                        outline: "none",
-                        input: { color: 'white' },
-                        '&.focused': {
-                          color: "white"
-                        },
-                        '&.shrink': {
-                          color: "white"
-                        },
-                        '& .MuiOutlinedInput-notchedOutline': {
-                          border: 'none'
-                        }
-                      }}
-                    />
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      required
-                      fullWidth
-                      id="lastName"
-                      label="Last Name"
-                      name="lastName"
-                      autoComplete="family-name"
-                      InputLabelProps={{className: "textfield_label"}}
-                      sx={{
-                        color: "white",
-                        backgroundColor: "black",
-                        border: "1px solid #23BE99",
-                        borderRadius: "20px",
-                        outline: "none",
-                        input: { color: 'white' },
-                        '& .MuiOutlinedInput-notchedOutline': {
-                          border: 'none'
-                        }
-                      }}
-                    />
-                  </Grid>
                   <Grid item xs={12}>
                     <TextField
                       required
@@ -153,11 +70,36 @@ function Form() {
                       }}
                     />
                   </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      required
+                      fullWidth
+                      id="password"
+                      label="Password"
+                      name="password"
+                      autoComplete="password"
+                      InputLabelProps={{className: "textfield_label"}}
+                      sx={{
+                        color: "white",
+                        backgroundColor: "black",
+                        border: "1px solid #23BE99",
+                        borderRadius: "20px",
+                        outline: "none",
+                        input: { color: 'white' },
+                        inputLabel: { color: "white" },
+                        textfield_label: { color: 'white' },
+                        '& .MuiOutlinedInput-notchedOutline': {
+                          border: 'none'
+                        }
+                      }}
+                    />
+                  </Grid>
                 </Grid>
                 <Button
                   type="submit"
                   fullWidth
                   variant="contained"
+                  className="center"
                   sx={{ mt: 3, mb: 2,
                     width: "300px",
                     color: "white",
@@ -175,7 +117,7 @@ function Form() {
                 }}
 
                 >
-                  Contact Member
+                  Login
                 </Button>
               </Box>
             </Box>
