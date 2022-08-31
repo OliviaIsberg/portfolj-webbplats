@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import backgroundVideo from "../../Assets/backgroundVideo.mp4";
 
+
 export default function Vision() {
   return (
     <Box className="vision-container">

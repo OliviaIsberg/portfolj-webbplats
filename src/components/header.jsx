@@ -34,7 +34,7 @@ function Header() {
             <Link className="headerLink" to="/">
               Hem
             </Link>
-            <Link className="headerLink" to="skills">
+            <Link className="headerLink" to="/skills/Scrumpage">
               Skills
             </Link>
             <Link className="headerLink" to="contact">
@@ -52,7 +52,7 @@ function Header() {
           width: '100%',
           top: 0,
           bottom: 0,
-          zIndex: 1,
+          zIndex: 2,
         }}
         display={
           open ? { xs: 'block', sm: 'block', md: 'none', lg: 'none' } : 'none'
@@ -72,7 +72,7 @@ function Header() {
           <Link
             onClick={() => setOpen(false)}
             className="headerLink"
-            to="skills"
+            to="/skills/Scrumpage"
           >
             Skills
           </Link>

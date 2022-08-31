@@ -31,11 +31,25 @@
 }
 
 .bookingButton {
-  width: 200px;
+  width: 300px;
   color: white;
-  background-color: black;
-  border: 1px solid #23be99;
+  border: 1px solid #000;
+  font-weight: 800;
+  border-radius: 10px;
   padding: 1rem;
+  cursor: pointer;
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+    to right,
+    #003850 0%,
+    #23be99 50%,
+    #003850 100%
+  );
+  transition: 0.5s;
+}
+
+.bookingButton:hover {
+  background-position: right center;
 }
 
 .visionText {

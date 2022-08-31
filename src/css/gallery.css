@@ -7,7 +7,7 @@
 
 h3 {
   color: white;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
   font-weight: 400;
 }
@@ -34,7 +34,8 @@ h3 {
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem;
-  box-shadow: -1px 0px 15px -2px white;
+  border-radius: 10px;
+  box-shadow: -1px 0px 10px -2px rgb(59, 59, 59);
 }
 
 @media screen and (max-width: 1024px) {

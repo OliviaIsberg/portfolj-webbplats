@@ -23,3 +23,17 @@
 .center:hover {
     background-color: #1b6856;
 }
+
+.confirmationMessage {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 400px;
+}
+
+@media screen and (max-width: 450px) {
+    .confirmationMessage {
+        width: 300px;
+    }
+}
