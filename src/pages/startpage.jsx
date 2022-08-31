@@ -5,11 +5,9 @@ import '../css/startpage.css';
 
 function StartPage() {
   return (
-    <div>
-      <div className="startpage-background">
+    <div className='startpage'>
         <Vision />
         <Gallery />
-      </div>
       <Map />
     </div>
   );
