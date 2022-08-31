@@ -46,6 +46,7 @@ function Header() {
       </Box>
       <Box
         sx={{
+          background: 'rgba(0, 0, 0, .2)',
           backdropFilter: 'blur(10px)',
           flexGrow: 1,
           position: 'absolute',
@@ -53,10 +54,10 @@ function Header() {
           top: 0,
           bottom: 0,
           zIndex: 2,
+          transform: open ? 'translate(0, 0)' : 'translate(0, -100vh)',
+          transition: 'transform ease-in-out 0.5s',
         }}
-        display={
-          open ? { xs: 'block', sm: 'block', md: 'none', lg: 'none' } : 'none'
-        }
+        display={{ xs: 'block', sm: 'block', md: 'none', lg: 'none' }}
       >
         <Box
           sx={{
