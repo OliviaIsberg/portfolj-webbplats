@@ -22,7 +22,7 @@ function Header() {
           <MenuIcon
             sx={{ color: '#ffffff', fontSize: '3rem' }}
             onClick={() => setOpen(!open)}
-            // fontSize="large"
+          // fontSize="large"
           />
         </Box>
 
@@ -79,7 +79,7 @@ function Header() {
           <Link
             onClick={() => setOpen(false)}
             className="headerLink"
-            to="contact"
+            to="/skills/contact"
           >
             Kontakt
           </Link>

@@ -1,8 +1,14 @@
 import { Box, Button, Typography, CardMedia } from '@mui/material';
 import '../../../css/Skills/Skills.css';
 import profileSimon from '../../../Assets/simon.png';
+import { Link } from 'react-router-dom';
+import "../../contactpagecomponents/form"
+
 
 export default function ScrumMaster() {
+  const name = "Simon"
+
+
   return (
     <Box className="skill-content">
       <Box className="description">
@@ -82,16 +88,20 @@ export default function ScrumMaster() {
                 "Det viktiga är inte din process. Det viktiga är din process för
                 att förbättra din process."
               </Typography>
-              <Button
-                sx={{
-                  border: '#23BE99 solid 0.1rem ',
-                  borderRadius: '.5rem',
-                  color: 'white',
-                  marginTop: '.5rem',
-                }}
-              >
-                Kontakta Simon{' '}
-              </Button>
+              <Link to="/skills/contact" >
+                <Button
+
+                  sx={{
+                    border: '#23BE99 solid 0.1rem ',
+                    borderRadius: '.5rem',
+                    color: 'white',
+                    marginTop: '.5rem',
+
+                  }}
+                >
+                  Kontakta {name}
+                </Button>
+              </Link>
             </div>
           </div>
         </Box>

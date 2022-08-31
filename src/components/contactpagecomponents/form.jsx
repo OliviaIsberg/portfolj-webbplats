@@ -10,6 +10,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import "../skillpagecomponents/Skills/ScrumMaster"
 
 function Form() {
   const handleSubmit = (event) => {
@@ -51,10 +52,10 @@ function Form() {
             id="memberSelectLabel"
             sx={{
               color: 'white',
-              '&.${inputLabelClasses.shrink}': {
-                // set the color of the label when shrinked (usually when the TextField is focused)
-                color: 'orange',
-              },
+              // '&.${inputLabelClasses.shrink}': {
+              //   // set the color of the label when shrinked (usually when the TextField is focused)
+              //   color: 'orange',
+              // },
             }}
           >
             Member
