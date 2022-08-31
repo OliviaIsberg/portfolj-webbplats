@@ -37,7 +37,7 @@ h3 {
 }
 
 .divLink {
-  width: 350px;
+  width: 360px;
   height: 250px;
   background-color: black;
   display: flex;
@@ -49,8 +49,8 @@ h3 {
   box-shadow: -1px 0px 10px -2px rgb(59, 59, 59);
 }
 
-.utvecklare {
-  width: 350px;
+.linkBox {
+  width: 360px;
   height: 250px;
 }
 

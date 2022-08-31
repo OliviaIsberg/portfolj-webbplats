@@ -11,21 +11,21 @@ export default function Gallery() {
 
       <div className="rollsBoxes">
         <div className="divLink">
-          <img className="utvecklare" src={Designer} alt="horse" />
+          <img className="linkBox" src={Designer} alt="horse" />
           <Link className="galleryLink" to="/skills/DesignPage">
             Designer
           </Link>
         </div>
 
         <div className="divLink">
-          <img className="utvecklare" src={Scrummaster} alt="horse" />
+          <img className="linkBox" src={Scrummaster} alt="horse" />
           <Link className="galleryLink" to="/skills/ScrumPage">
             Scrummästare
           </Link>
         </div>
 
         <div className="divLink">
-          <img className="utvecklare" src={Utvecklare} alt="horse" />
+          <img className="linkBox" src={Utvecklare} alt="horse" />
           <Link className="galleryLink" to="/skills/DeveloperPage">
             Utvecklare
           </Link>
