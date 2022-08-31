@@ -38,9 +38,9 @@
   background-size: 300% 300%;
   background-image: linear-gradient(
     to right,
-    #005a6f 0%,
-    #43e2bd 50%,
-    #005a6f 100%
+    #004150 0%,
+    #48e4c0 50%,
+    #004150 100%
   );
   transition: 0.5s;
 }
