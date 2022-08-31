@@ -65,11 +65,11 @@ function Form() {
                         id="memberSelectLabel"
                         sx={{
                             color: 'white',
-                            '&.${inputLabelClasses.shrink}': {
-                                // set the color of the label when shrinked (usually when the TextField is focused)
-                                color: 'orange',
-                            },
-                        }}
+                            // '&.${inputLabelClasses.shrink}': {
+                            //     // set the color of the label when shrinked (usually when the TextField is focused)
+                            //     color: 'orange',
+                            // },
+                          }}
                     >
                         Member
                     </InputLabel>
