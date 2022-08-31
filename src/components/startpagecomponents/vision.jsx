@@ -1,5 +1,5 @@
-import '../../css/vision.css';
-import { Link } from 'react-router-dom';
+import "../../css/vision.css";
+import { Link } from "react-router-dom";
 
 export default function Vision() {
   return (
