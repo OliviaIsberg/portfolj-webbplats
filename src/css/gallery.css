@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 10rem;
+  margin: 5rem;
 }
 
 h3 {
@@ -10,6 +10,8 @@ h3 {
   margin-bottom: 2rem;
   text-transform: uppercase;
   font-weight: 400;
+  padding: 5px;
+  border-bottom: 1px solid #23be99;
 }
 
 .rollsBoxes {
@@ -17,25 +19,39 @@ h3 {
   justify-content: space-evenly;
   text-align: center;
   width: 100%;
+  position: relative;
 }
 
 .galleryLink {
   text-decoration: none;
   color: white;
-  border-bottom: 2px solid #23be99;
+  background: #23be99;
+  padding: 1rem;
   text-transform: uppercase;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+}
+
+.galleryLink:hover {
+  transform: scale(1.1);
 }
 
 .divLink {
-  width: 300px;
-  height: 200px;
+  width: 350px;
+  height: 250px;
   background-color: black;
   display: flex;
+  font-weight: 600;
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem;
   border-radius: 10px;
   box-shadow: -1px 0px 10px -2px rgb(59, 59, 59);
+}
+
+.utvecklare {
+  width: 350px;
+  height: 250px;
 }
 
 @media screen and (max-width: 1024px) {
