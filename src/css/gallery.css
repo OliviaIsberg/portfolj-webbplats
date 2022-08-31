@@ -54,7 +54,7 @@ h3 {
   height: 250px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1310px) {
   button {
     width: 170px;
   }
@@ -69,6 +69,10 @@ h3 {
   .divLink {
     width: 400px;
   }
+
+  .linkBox {
+    width: 400px;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -79,5 +83,10 @@ h3 {
 
   .divLink {
     width: 300px;
+    height: 220px;
+  }
+  .linkBox {
+    width: 300px;
+    height: 220px;
   }
 }
