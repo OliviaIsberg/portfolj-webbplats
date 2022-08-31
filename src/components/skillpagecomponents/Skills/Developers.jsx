@@ -1,9 +1,9 @@
-import { Box, Button, Typography, CardMedia } from "@mui/material";
-import "../../../css/Skills/Skills.css";
-import profileAnna from "../../../Assets/anna.png";
-import profileMax from "../../../Assets/max.png";
-import profileOlivia from "../../../Assets/olivia.png";
-
+import { Box, Button, Typography, CardMedia } from '@mui/material';
+import '../../../css/Skills/Skills.css';
+import profileAnna from '../../../Assets/anna.png';
+import profileMax from '../../../Assets/max.png';
+import profileOlivia from '../../../Assets/olivia.png';
+import { Link } from 'react-router-dom';
 export default function Developers() {
   return (
     <Box className="skill-content">
@@ -11,7 +11,7 @@ export default function Developers() {
         <Typography
           variant="h3"
           className="title"
-          sx={{ marginBottom: "1rem" }}
+          sx={{ marginBottom: '1rem' }}
         >
           Utvecklare
         </Typography>
@@ -77,24 +77,28 @@ export default function Developers() {
                 className="expert-pic"
                 component="img"
                 src={profileMax}
-                sx={{ width: "10rem" }}
+                sx={{ width: '10rem' }}
               />
             </div>
             <div className="expert-desc">
               <Typography variant="subtitle1">MAX ANDERSSON</Typography>
               <Typography variant="body1">
-              "Programmering är att bryta en stor omöjlig uppgift i flera mycket små möjliga uppgifter."
+                "Programmering är att bryta en stor omöjlig uppgift i flera
+                mycket små möjliga uppgifter."
               </Typography>
-              <Button
-                sx={{
-                  border: "#23BE99 solid 0.1rem ",
-                  borderRadius: ".5rem",
-                  color: "white",
-                  marginTop: ".5rem",
-                }}
-              >
-                Kontakta Max{" "}
-              </Button>
+
+              <Link to="/contact/max">
+                <Button
+                  sx={{
+                    border: '#23BE99 solid 0.1rem ',
+                    borderRadius: '.5rem',
+                    color: 'white',
+                    marginTop: '.5rem',
+                  }}
+                >
+                  Kontakta Max{' '}
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="expert-description">
@@ -103,7 +107,7 @@ export default function Developers() {
                 className="expert-pic"
                 component="img"
                 src={profileOlivia}
-                sx={{ width: "10rem" }}
+                sx={{ width: '10rem' }}
               />
             </div>
             <div className="expert-desc">
@@ -111,16 +115,18 @@ export default function Developers() {
               <Typography variant="body1">
                 "Först lösa problemet. Skriv sedan koden."
               </Typography>
-              <Button
-                sx={{
-                  border: "#23BE99 solid 0.1rem ",
-                  borderRadius: ".5rem",
-                  color: "white",
-                  marginTop: ".5rem",
-                }}
-              >
-                Kontakta Olivia{" "}
-              </Button>
+              <Link to="/contact/olivia">
+                <Button
+                  sx={{
+                    border: '#23BE99 solid 0.1rem ',
+                    borderRadius: '.5rem',
+                    color: 'white',
+                    marginTop: '.5rem',
+                  }}
+                >
+                  Kontakta Olivia{' '}
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="expert-description">
@@ -129,24 +135,27 @@ export default function Developers() {
                 className="expert-pic"
                 component="img"
                 src={profileAnna}
-                sx={{ width: "10rem" }}
+                sx={{ width: '10rem' }}
               />
             </div>
             <div className="expert-desc">
               <Typography variant="subtitle1">ANNA ÖZMEHAK</Typography>
               <Typography variant="body1">
-              "Programmering är en konstart som slår tillbaka."
+                "Programmering är en konstart som slår tillbaka."
               </Typography>
-              <Button
-                sx={{
-                  border: "#23BE99 solid 0.1rem ",
-                  borderRadius: ".5rem",
-                  color: "white",
-                  marginTop: ".5rem",
-                }}
-              >
-                Kontakta Anna{" "}
-              </Button>
+
+              <Link to="/contact/anna">
+                <Button
+                  sx={{
+                    border: '#23BE99 solid 0.1rem ',
+                    borderRadius: '.5rem',
+                    color: 'white',
+                    marginTop: '.5rem',
+                  }}
+                >
+                  Kontakta Anna{' '}
+                </Button>
+              </Link>
             </div>
           </div>
         </Box>

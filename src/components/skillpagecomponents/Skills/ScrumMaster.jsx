@@ -1,6 +1,7 @@
 import { Box, Button, Typography, CardMedia } from '@mui/material';
 import '../../../css/Skills/Skills.css';
 import profileSimon from '../../../Assets/simon.png';
+import { Link } from 'react-router-dom';
 
 export default function ScrumMaster() {
   return (
@@ -82,16 +83,18 @@ export default function ScrumMaster() {
                 "Det viktiga är inte din process. Det viktiga är din process för
                 att förbättra din process."
               </Typography>
-              <Button
-                sx={{
-                  border: '#23BE99 solid 0.1rem ',
-                  borderRadius: '.5rem',
-                  color: 'white',
-                  marginTop: '.5rem',
-                }}
-              >
-                Kontakta Simon{' '}
-              </Button>
+              <Link to="/contact/simon">
+                <Button
+                  sx={{
+                    border: '#23BE99 solid 0.1rem ',
+                    borderRadius: '.5rem',
+                    color: 'white',
+                    marginTop: '.5rem',
+                  }}
+                >
+                  Kontakta Simon
+                </Button>
+              </Link>
             </div>
           </div>
         </Box>
