@@ -52,6 +52,7 @@ h3 {
 .linkBox {
   width: 360px;
   height: 250px;
+  opacity: 50%;
 }
 
 @media screen and (max-width: 1310px) {
