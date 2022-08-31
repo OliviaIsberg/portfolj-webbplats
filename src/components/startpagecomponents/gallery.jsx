@@ -2,7 +2,7 @@ import "../../css/gallery.css";
 import { Link } from "react-router-dom";
 import Utvecklare from "../../Assets/utvecklare.jpeg";
 import Designer from "../../Assets/designer.jpeg";
-import Scrummaster from "../../Assets/scrummaster.png";
+import Scrummaster from "../../Assets/scrummaster.jpeg";
 
 export default function Gallery() {
   return (
