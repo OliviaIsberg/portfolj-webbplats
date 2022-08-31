@@ -21,7 +21,6 @@ function Form() {
     const [message, setMessage] = useState('');
     const [member, setMember] = React.useState('');
 
-
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -29,7 +28,7 @@ function Form() {
             email: data.get('firstName'),
             password: data.get('lastName'),
         });
-        setConfirmation(true)
+        setConfirmation(true);
         setFirstName('');
         setLastName('');
         setEmail('');
@@ -38,7 +37,6 @@ function Form() {
     };
 
     const handleClose = () => setConfirmation(false);
-
 
     const handleChange = (event) => {
         setMember(event.target.value);
@@ -259,14 +257,13 @@ function Form() {
                                 transform: 'translate(-50%, 50%',
                                 width: 400,
                                 border: '2px solid white',
-                                boxShadow: 24,
-                                backdropFilter: 'blur(8px)'
+                                boxShadow: 24
                             }}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
+                                <Typography id="modal-modal-title" variant="h6" component="h2" sx={{fontSize: '30px'}}>
                                     Bekräftelse
                                 </Typography>
-                                <Typography id="modal-modal-description" sx={{mt: 2}}>
-                                    Tack för ditt email. Vi återkommer så snart vi kan.
+                                <Typography id="modal-modal-description" sx={{mt: 2, fontSize: '20px'}}>
+                                    Ditt email har nu skickats iväg. Vi återkommer så snart vi kan.
                                 </Typography>
                             </Box>
                         </Modal>
