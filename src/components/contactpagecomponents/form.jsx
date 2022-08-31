@@ -250,22 +250,14 @@ function Form() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={{
-                                position: 'absolute',
-                                top: '30%',
-                                left: '35%',
-                                transform: 'translate(-50%, 50%',
-                                width: 400,
-                                border: '2px solid white',
-                                boxShadow: 24
-                            }}>
+                            <div className="confirmationMessage">
                                 <Typography id="modal-modal-title" variant="h6" component="h2" sx={{fontSize: '30px'}}>
                                     Bekräftelse
                                 </Typography>
                                 <Typography id="modal-modal-description" sx={{mt: 2, fontSize: '20px'}}>
                                     Ditt email har nu skickats iväg. Vi återkommer så snart vi kan.
                                 </Typography>
-                            </Box>
+                            </div>
                         </Modal>
                     )
                     }
