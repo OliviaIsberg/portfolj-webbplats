@@ -8,13 +8,13 @@ export default function Designers() {
     <Box className="skill-content">
       <Box className="description">
         <Typography
-          variant="h3"
+          variant="h4"
           className="title"
           sx={{ marginBottom: "1rem" }}
         >
           Designer
         </Typography>
-        <Typography variant="body1">
+        <Typography variant="body2">
           Med Rosanna och Sara i spetsen kan ni förvänta er en förstklassig
           design där användarupplevelsen står högt i fokus. Gnistor kommer att
           uppstå när Rosanna och Sara sätter fart inom designens alla verktyg.
@@ -24,19 +24,19 @@ export default function Designers() {
       </Box>
       <Box className="tool-expert-container">
         <Box className="tool-box">
-          <Typography variant="h4">Verktyg</Typography>
+          <Typography variant="h5">Verktyg</Typography>
           <div className="tools">
             <div className="tool">
-              <Typography variant="h5">Figma</Typography>
-              <Typography variant="body1">
+              <Typography variant="h6">Figma</Typography>
+              <Typography variant="body2">
                 Med hjälp av Figma får vi snabbt upp en design prototyp av eran
                 hemsida. Ett tidsbesparande sätt att arbeta då ni kommer att få
                 en bra överblick av hemsidan och kan komma med önskemål.
               </Typography>
             </div>
             <div className="tool">
-              <Typography variant="h5">Adobe Photoshop</Typography>
-              <Typography variant="body1">
+              <Typography variant="h6">Adobe Photoshop</Typography>
+              <Typography variant="body2">
                 Med Photoshop förbättrar vi bilder, designar, retuscherar och
                 skapar montage. Photoshop är gigantiskt, men låt dig inte
                 skrämmas, Rosanna och Sara har stenkoll på denna härliga
@@ -44,8 +44,8 @@ export default function Designers() {
               </Typography>
             </div>
             <div className="tool">
-              <Typography variant="h5">Adobe InDesign</Typography>
-              <Typography variant="body1">
+              <Typography variant="h6">Adobe InDesign</Typography>
+              <Typography variant="body2">
                 När det är dags för att skapa digitalt material och
                 tryckprodukter såsom broschyrer, reklamblad samt böcker använder
                 vi hos av det kraftfulla verktyget Adobe inDesign för snabbheten
@@ -53,8 +53,8 @@ export default function Designers() {
               </Typography>
             </div>
             <div className="tool">
-              <Typography variant="h5">UX</Typography>
-              <Typography variant="body1">
+              <Typography variant="h6">UX</Typography>
+              <Typography variant="body2">
                 För att få en användarvänlig hemsida där rätt sak har rätt plats
                 kommer upplevelsen på hemsidan vara på topp och inriktad mot
                 rätt målgrupp.
@@ -63,19 +63,19 @@ export default function Designers() {
           </div>
         </Box>
         <Box className="expert-box">
-          <Typography variant="h4">Experter</Typography>
+          <Typography variant="h5">Experter</Typography>
           <div className="expert-description">
             <div className="expert-pic-div">
               <CardMedia
                 className="expert-pic"
                 component="img"
                 src={profileSara}
-                sx={{ width: "10rem" }}
+               /*  sx={{ width: "10rem" }} */
               />
             </div>
             <div className="expert-desc">
               <Typography variant="subtitle1">SARA LINDQVIST</Typography>
-              <Typography variant="body1">
+              <Typography variant="body2">
               "Design är intelligens som görs synlig."
               </Typography>
               <Button
@@ -96,12 +96,12 @@ export default function Designers() {
                 className="expert-pic"
                 component="img"
                 src={profileRosanna}
-                sx={{ width: "10rem" }}
+               /*  sx={{ width: "10rem" }} */
               />
             </div>
             <div className="expert-desc">
               <Typography variant="subtitle1">ROSANNA PISTONE</Typography>
-              <Typography variant="body1">
+              <Typography variant="body2">
               ”Jag strävar efter två saker i design: enkelhet och tydlighet. Bra design föds ur dessa två."
               </Typography>
               <Button

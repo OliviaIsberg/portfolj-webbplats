@@ -1,10 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-.video {
-  width: 100%;
-  background-size: contain;
-  opacity: 50%;
-}
+.vision-container {height: 60vh;}
+
 
 .visionTextContainer {
   position: absolute;
@@ -66,7 +63,7 @@
     width: 80%;
   }
   .visionTextContainer {
-    transform: translate(10%, -110%);
+    transform: translate(10%, -150%);
     width: 70%;
   }
 }
@@ -76,7 +73,7 @@
     width: 80%;
   }
   .visionTextContainer {
-    transform: translate(10%, -110%);
+    transform: translate(10%, -150%);
     width: 70%;
   }
 }
@@ -87,7 +84,7 @@
     width: 80%;
   }
   .visionTextContainer {
-    transform: translate(10%, -125%);
+    transform: translate(10%, -140%);
     width: 70%;
   }
   .visionTextContainer h1 {
@@ -98,16 +95,11 @@
   }
 }
 
-@media screen and (max-width: 700px) {
-  .visionTextContainer {
-    transform: translate(10%, -110%);
-    width: 70%;
-  }
-}
+
 
 @media screen and (max-width: 600px) {
   .visionTextContainer {
-    transform: translate(10%, -95%);
+    transform: translate(10%, -120%);
     width: 70%;
   }
   .visionTextContainer h1 {
