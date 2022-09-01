@@ -3,7 +3,6 @@ import '../../../css/Skills/Skills.css';
 import profileRosanna from '../../../Assets/rosanna.png';
 import profileSara from '../../../Assets/sara.png';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
 export default function Designers() {
   return (
