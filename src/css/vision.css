@@ -33,10 +33,9 @@
 .bookingButton {
   width: 300px;
   color: white;
-  border: 1px solid #000;
   font-weight: 800;
-  border-radius: 10px;
   padding: 1rem;
+  border: none;
   cursor: pointer;
   background-size: 300% 300%;
   background-image: linear-gradient(
