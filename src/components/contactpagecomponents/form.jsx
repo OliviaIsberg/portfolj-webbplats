@@ -12,6 +12,8 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { useState } from 'react';
 import { Modal } from '@mui/material';
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
 
 function Form(props) {
   const [confirmation, setConfirmation] = useState(false);
@@ -25,13 +27,30 @@ function Form(props) {
 
   console.log(member);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('firstName'),
-      password: data.get('lastName'),
-    });
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_uysopf7',
+        'template_wcn8izn',
+        form.current,
+        'ESM9l92_E5OXcIWNP'
+      )
+      .then(
+        (result) => {
+          handleSubmit();
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const handleSubmit = () => {
     setConfirmation(true);
     setFirstName('');
     setLastName('');
@@ -67,12 +86,10 @@ function Form(props) {
         <FormControl fullWidth>
           <InputLabel
             id="memberSelectLabel"
+            name="to_name"
+            type="text"
             sx={{
               color: 'white',
-              // '&.${inputLabelClasses.shrink}': {
-              //     // set the color of the label when shrinked (usually when the TextField is focused)
-              //     color: 'orange',
-              // },
             }}
           >
             Member
@@ -97,13 +114,15 @@ function Form(props) {
             <MenuItem value={'olivia'}>Olivia Isberg</MenuItem>
             <MenuItem value={'max'}>Max Andersson</MenuItem>
             <MenuItem value={'anna'}>Anna Özmehak</MenuItem>
-            <MenuItem value={'rossana'}>Rossana Pistone</MenuItem>
+            <MenuItem value={'rosanna'}>Rosanna Pistone</MenuItem>
           </Select>
         </FormControl>
         <Box
+          name="to_name"
           component="form"
+          ref={form}
           noValidate
-          onSubmit={handleSubmit}
+          onSubmit={sendEmail}
           sx={{
             mt: 3,
             display: 'flex',
@@ -115,7 +134,8 @@ function Form(props) {
             <Grid item xs={12} sm={6}>
               <TextField
                 autoComplete="given-name"
-                name="firstName"
+                type="text"
+                name="user_name"
                 required
                 fullWidth
                 id="firstName"
@@ -147,9 +167,10 @@ function Form(props) {
               <TextField
                 required
                 fullWidth
+                type="text"
+                name="user_name"
                 id="lastName"
                 label="Last Name"
-                name="lastName"
                 autoComplete="family-name"
                 onChange={(event) => setLastName(event.target.value)}
                 value={lastName}
@@ -170,10 +191,10 @@ function Form(props) {
             <Grid item xs={12}>
               <TextField
                 required
-                fullWidth
                 id="email"
+                type="email"
+                name="user_email"
                 label="Email Address"
-                name="email"
                 autoComplete="email"
                 onChange={(event) => setEmail(event.target.value)}
                 value={email}
@@ -226,6 +247,7 @@ function Form(props) {
           </Grid>
           <Button
             type="submit"
+            value="Send"
             variant="contained"
             className="white"
             sx={{
