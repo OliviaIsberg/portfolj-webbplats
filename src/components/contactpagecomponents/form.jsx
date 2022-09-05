@@ -14,6 +14,20 @@ import { useState } from 'react';
 import { Modal } from '@mui/material';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
+import { useFormik } from "formik";
+import * as yup from "yup";
+
+const validationSchema = yup.object({
+  member: yup.string().required('Välj en kontaktperson'),
+  firstName: yup.string().required('Ange ditt förnamn').min(2),
+  lastName: yup.string().required('Ange ditt efternamn').min(2),
+  email: yup
+    .string()
+    .email('Ange en giltig e-post')
+    .required('Ange en giltig e-post'),
+  message: yup.string().required('Skriv ett meddellande!').min(4),
+});
+
 
 function Form(props) {
   const [confirmation, setConfirmation] = useState(false);
@@ -25,12 +39,11 @@ function Form(props) {
     props.name ? props.name.toLowerCase() : ''
   );
 
-  console.log(member);
-
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    formik.handleSubmit();
 
     emailjs
       .sendForm(
@@ -57,6 +70,8 @@ function Form(props) {
     setEmail('');
     setMessage('');
     setMember('');
+    
+
   };
 
   const handleClose = () => setConfirmation(false);
@@ -64,6 +79,20 @@ function Form(props) {
   const handleChange = (event) => {
     setMember(event.target.value);
   };
+
+  const formik = useFormik({
+    initialValues: {
+      member: '',
+      firstName: '',
+      lastName: '',
+      email: '',
+      message: '',
+    },
+    validationSchema: validationSchema,
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
 
   return (
     <Container component="main" maxWidth="xs" sx={{ marginBottom: '8.5rem' }}>
@@ -83,11 +112,26 @@ function Form(props) {
         >
           Vad kan vi hjälpa dig med?
         </Typography>
-        <FormControl fullWidth>
-          <InputLabel
+        <Box
+          name="to_name"
+          component="form"
+          ref={form}
+          onSubmit={sendEmail}
+          sx={{
+            mt: 3,
+            display: 'flex',
+            alignItems: 'center',
+            flexDirection: 'column',
+          }}
+        >
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <FormControl fullWidth>
+            <InputLabel
             id="memberSelectLabel"
             name="to_name"
             type="text"
+            fullWidth
             sx={{
               color: 'white',
             }}
@@ -96,6 +140,7 @@ function Form(props) {
           </InputLabel>
           <Select
             required
+            fullWidth
             labelId="memberSelectLabel"
             id="memberSelect"
             value={member}
@@ -116,21 +161,8 @@ function Form(props) {
             <MenuItem value={'anna'}>Anna Özmehak</MenuItem>
             <MenuItem value={'rosanna'}>Rosanna Pistone</MenuItem>
           </Select>
-        </FormControl>
-        <Box
-          name="to_name"
-          component="form"
-          ref={form}
-          noValidate
-          onSubmit={sendEmail}
-          sx={{
-            mt: 3,
-            display: 'flex',
-            alignItems: 'center',
-            flexDirection: 'column',
-          }}
-        >
-          <Grid container spacing={2}>
+          </FormControl>
+            </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
                 autoComplete="given-name"
@@ -140,6 +172,7 @@ function Form(props) {
                 fullWidth
                 id="firstName"
                 label="First Name"
+                inputProps={{maxLength: 20}}
                 autoFocus
                 onChange={(event) => setFirstName(event.target.value)}
                 value={firstName}
@@ -171,6 +204,7 @@ function Form(props) {
                 name="user_name"
                 id="lastName"
                 label="Last Name"
+                inputProps={{maxLength: 20}}
                 autoComplete="family-name"
                 onChange={(event) => setLastName(event.target.value)}
                 value={lastName}
@@ -191,10 +225,12 @@ function Form(props) {
             <Grid item xs={12}>
               <TextField
                 required
+                fullWidth
                 id="email"
                 type="email"
                 name="user_email"
                 label="Email Address"
+                inputProps={{maxLength: 20}}
                 autoComplete="email"
                 onChange={(event) => setEmail(event.target.value)}
                 value={email}
@@ -226,9 +262,8 @@ function Form(props) {
                 value={message}
                 InputLabelProps={{ className: 'textfield_label' }}
                 multiline
-                rows={3}
-                maxRows={6}
-                inputProps={{ style: { color: 'white' } }}
+                rows={4}
+                inputProps={{ style: { color: 'white' }, maxLength: 100  }}
                 sx={{
                   color: 'white!important',
                   backgroundColor: 'black',
