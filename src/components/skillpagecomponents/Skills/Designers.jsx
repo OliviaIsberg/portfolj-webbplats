@@ -1,7 +1,8 @@
-import { Box, Button, Typography, CardMedia } from "@mui/material";
-import "../../../css/Skills/Skills.css";
-import profileRosanna from "../../../Assets/rosanna.png";
-import profileSara from "../../../Assets/sara.png";
+import { Box, Button, Typography, CardMedia } from '@mui/material';
+import '../../../css/Skills/Skills.css';
+import profileRosanna from '../../../Assets/rosanna.png';
+import profileSara from '../../../Assets/sara.png';
+import { Link } from 'react-router-dom';
 
 export default function Designers() {
   return (
@@ -10,7 +11,7 @@ export default function Designers() {
         <Typography
           variant="h4"
           className="title"
-          sx={{ marginBottom: "1rem" }}
+          sx={{ marginBottom: '1rem' }}
         >
           Designer
         </Typography>
@@ -70,7 +71,6 @@ export default function Designers() {
                 className="expert-pic"
                 component="img"
                 src={profileSara}
-               /*  sx={{ width: "10rem" }} */
               />
             </div>
             <div className="expert-desc">
@@ -78,16 +78,18 @@ export default function Designers() {
               <Typography variant="body2">
               "Design är intelligens som görs synlig."
               </Typography>
-              <Button
-                sx={{
-                  border: "#23BE99 solid 0.1rem ",
-                  borderRadius: ".5rem",
-                  color: "white",
-                  marginTop: ".5rem",
-                }}
-              >
-                Kontakta Sara{" "}
-              </Button>
+              <Link to="/contact/sara">
+                <Button
+                  sx={{
+                    border: '#23BE99 solid 0.1rem ',
+                    borderRadius: '.5rem',
+                    color: 'white',
+                    marginTop: '.5rem',
+                  }}
+                >
+                  Kontakta Sara{' '}
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="expert-description">
@@ -96,7 +98,6 @@ export default function Designers() {
                 className="expert-pic"
                 component="img"
                 src={profileRosanna}
-               /*  sx={{ width: "10rem" }} */
               />
             </div>
             <div className="expert-desc">
@@ -104,16 +105,18 @@ export default function Designers() {
               <Typography variant="body2">
               ”Jag strävar efter två saker i design: enkelhet och tydlighet. Bra design föds ur dessa två."
               </Typography>
-              <Button
-                sx={{
-                  border: "#23BE99 solid 0.1rem ",
-                  borderRadius: ".5rem",
-                  color: "white",
-                  marginTop: ".5rem",
-                }}
-              >
-                Kontakta Rosanna{" "}
-              </Button>
+              <Link to="/contact/rossana">
+                <Button
+                  sx={{
+                    border: '#23BE99 solid 0.1rem ',
+                    borderRadius: '.5rem',
+                    color: 'white',
+                    marginTop: '.5rem',
+                  }}
+                >
+                  Kontakta Rosanna{' '}
+                </Button>
+              </Link>
             </div>
           </div>
         </Box>
