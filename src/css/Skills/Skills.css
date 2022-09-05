@@ -3,12 +3,12 @@
 .skill-content {
   display: flex;
   flex-direction: column;
-  padding: 3rem;
-  border: #23be99 0.2rem solid;
+  padding: 1rem;
+  border: #23be99 0.05rem solid;
   font-family: 'Istok Web', sans-serif;
   background-color: black;
   color: white;
-  margin: 1rem;
+  margin: .5rem;
 }
 
 .title {
@@ -30,17 +30,16 @@
 }
 
 .tool-box {
-  margin-top: 5rem;
-  padding-bottom: 2rem;
+  margin-top: 2rem;
   color: white;
-  width: 100%;
+  width: 70%;
 }
 
 .tools {
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
   flex-wrap: wrap;
 }
 
@@ -53,33 +52,31 @@
   width: 45%;
 }
 
-.tool h5 {
+.tool h6 {
+  margin-bottom: .5rem;
   width: fit-content;
-  margin-bottom: 1rem;
   border-bottom: #23be99 solid 0.2rem;
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.1rem;
 }
 
 .expert-box {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin-top: 5rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
+  width: 30%;
+  margin-top: 2rem;
 }
 
 .expert-description {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   margin-bottom: 1rem;
-  margin-top: 2rem;
+  margin-top: .5rem;
+  width: 100%;
 }
 
 .expert-pic-div {
   display: flex;
-  width: 50%;
+  width: 40%;
 }
 
 .expert-pic {
@@ -88,13 +85,13 @@
   border-top-right-radius: 20%;
   border-bottom-right-radius: 30%;
   border-bottom-left-radius: -20%;
-  padding: 1rem;
-  margin-top: 1rem;
+  padding: .5rem;
+  margin-top: .5rem;
 }
 
 .expert-desc {
-  margin: 1rem;
-  width: 100%;
+  width: 60%;
+  margin-left: 2rem;
   text-align: left;
 }
 
@@ -102,7 +99,6 @@
   .expert-box {
     width: 30%;
     display: flex;
-    justify-content: left;
   }
   .tool-box {
     width: 70%;
@@ -110,10 +106,11 @@
   .expert-description {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
   }
   .expert-desc {
-    width: 100%;
+    width: 80%;
+    margin-left: 0rem;
+    margin-top: 1rem;
   }
   .expert-pic-div {
     justify-content: left;
@@ -127,11 +124,9 @@
 @media (max-width: 910px) {
   .skill-content {
     padding: 2rem;
-    /* width: 100%; */
   }
   .tool-expert-container {
     flex-wrap: wrap;
-    /* width: 100%; */
   }
   .tool-box {
     width: 100%;
@@ -148,7 +143,7 @@
     justify-content: center;
   }
   .expert-box {
-    width: 100%;
+    width: 100%; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,19 +155,35 @@
     align-items: center;
   }
   .expert-desc {
-    width: 50%;
+    width: 20%;
+    margin-left: 1rem;
   }
   .expert-pic-div {
-    width: 50%;
+    width: 20%;
     justify-content: flex-end;
+    margin-right: 1rem;
   }
 }
 
-@media (max-width: 710px) {
+@media (max-width: 722px) {
   .expert-box {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
+
+  .expert-desc {
+    width: 40%;
+    margin-left: 1rem;
+  }
+  .expert-pic-div {
+    width: 20%;
+    justify-content: flex-end;
+    margin-right: 1rem;
+  }
+
   .tool {
     width: 100%;
     text-align: center;

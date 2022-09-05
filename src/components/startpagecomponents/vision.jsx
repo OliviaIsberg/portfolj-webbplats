@@ -8,9 +8,11 @@ import backgroundVideo from "../../Assets/backgroundVideo.mp4";
 export default function Vision() {
   return (
     <Box className="vision-container">
-      <video autoPlay loop muted className="video">
+      <div className="video-container" style={{width: "100%", height: "100%"}}>
+      <video autoPlay loop muted className="video" style={{width: "100%", height: "100%", contain: "size", opacity: "50%"}} >
         <source src={backgroundVideo} type="video/mp4" />
       </video>
+      </div>
       <div className="visionTextContainer">
         <h2>CREATIVE MINDS. CREATIVE WORKS.</h2>
         <h1>
