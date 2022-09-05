@@ -74,7 +74,6 @@ export default function ScrumMaster() {
                 className="expert-pic"
                 component="img"
                 src={profileSimon}
-                /* sx={{ width: '8rem', height: '8rem' }} */
               />
             </div>
             <div className="expert-desc">
@@ -83,7 +82,7 @@ export default function ScrumMaster() {
                 "Det viktiga är inte din process. Det viktiga är din process för
                 att förbättra din process."
               </Typography>
-              <Link to="/contact/simon">
+              <Link to="/contact/simon" style={{ textDecoration:'none' }}>
                 <Button
                   sx={{
                     border: '#23BE99 solid 0.1rem ',

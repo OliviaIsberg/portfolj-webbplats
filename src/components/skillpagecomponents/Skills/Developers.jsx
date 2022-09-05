@@ -85,7 +85,7 @@ export default function Developers() {
               "Programmering är att bryta en stor omöjlig uppgift i flera mycket små möjliga uppgifter."
               </Typography>
 
-              <Link to="/contact/max">
+              <Link to="/contact/max" style={{ textDecoration:'none' }}>
                 <Button
                   sx={{
                     border: '#23BE99 solid 0.1rem ',
@@ -112,7 +112,7 @@ export default function Developers() {
               <Typography variant="body2">
                 "Först lösa problemet. Skriv sedan koden."
               </Typography>
-              <Link to="/contact/olivia">
+              <Link to="/contact/olivia" style={{ textDecoration:'none' }}>
                 <Button
                   sx={{
                     border: '#23BE99 solid 0.1rem ',
@@ -140,7 +140,7 @@ export default function Developers() {
               "Programmering är en konstart som slår tillbaka."
               </Typography>
 
-              <Link to="/contact/anna">
+              <Link to="/contact/anna" style={{ textDecoration:'none' }}>
                 <Button
                   sx={{
                     border: '#23BE99 solid 0.1rem ',

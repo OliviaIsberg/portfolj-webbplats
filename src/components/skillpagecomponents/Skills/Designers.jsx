@@ -78,7 +78,7 @@ export default function Designers() {
               <Typography variant="body2">
               "Design är intelligens som görs synlig."
               </Typography>
-              <Link to="/contact/sara">
+              <Link to="/contact/sara" style={{ textDecoration:'none' }}>
                 <Button
                   sx={{
                     border: '#23BE99 solid 0.1rem ',
@@ -105,7 +105,7 @@ export default function Designers() {
               <Typography variant="body2">
               ”Jag strävar efter två saker i design: enkelhet och tydlighet. Bra design föds ur dessa två."
               </Typography>
-              <Link to="/contact/rossana">
+              <Link to="/contact/rossana" style={{ textDecoration:'none' }}>
                 <Button
                   sx={{
                     border: '#23BE99 solid 0.1rem ',
