@@ -1,7 +1,7 @@
-import { Box, Typography, Container, Grid, Link } from "@mui/material";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import React from "react";
+import { Box, Typography, Container, Grid, Link } from '@mui/material';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import React from 'react';
 
 function Footer() {
   return (
@@ -12,9 +12,9 @@ function Footer() {
         bgcolor="black"
         color="white"
       >
-        <Container maxWidth="sm">
+        <Container maxWidth="sm" sx={{ margin: 'auto' }}>
           <Grid container spacing={3}>
-            <Grid item xs={12} sm={4}>
+            <Grid item xs={12} sm={4} sx={{ textAlign: 'center' }}>
               <Link underline="none" href="/" color="white">
                 <Typography variant="body1" mt="1rem">
                   Hitta oss
@@ -26,8 +26,8 @@ function Footer() {
                 </Typography>
               </Link>
             </Grid>
-            <Grid item xs={12} sm={4}>
-              <Link underline="none" href="/" color="white">
+            <Grid item xs={12} sm={4} sx={{ textAlign: 'center' }}>
+              <Link underline="none" href="/contact" color="white">
                 <Typography variant="body1" mt="1rem" color="white">
                   Kontakta oss
                 </Typography>
@@ -38,7 +38,7 @@ function Footer() {
                 </Typography>
               </Link>
             </Grid>
-            <Grid item xs={12} sm={4}>
+            <Grid item xs={12} sm={4} sx={{ textAlign: 'center' }}>
               <Link href="/">
                 <Typography color="#2279d0">
                   <FacebookIcon fontSize="large"></FacebookIcon>
