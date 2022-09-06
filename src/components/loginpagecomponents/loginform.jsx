@@ -24,7 +24,7 @@ function LoginForm() {
     event.preventDefault();
     formik.handleSubmit();
     handleSubmit();
-    alert("yo");
+    alert("logged in / registered");
   };
 
   const changeLogin = () => {
@@ -85,7 +85,7 @@ function LoginForm() {
           className='contactMember'
           onClick={() => changeRegister()}
           sx={{ color: "white", textDecoration: "underline", mt: "-1.5rem", ":hover": {
-            color: "#23BE89",
+            color: "#23BE89", cursor: "pointer",
           } }}>
             Har du redan ett konto?
         </Typography>
@@ -209,7 +209,7 @@ function LoginForm() {
           className='contactMember'
           onClick={() => changeLogin()}
           sx={{ color: "white", textDecoration: "underline", mt: "-1.5rem", ":hover": {
-            color: "#23BE89",
+            color: "#23BE89", cursor: "pointer",
           } }}>
             Har du inget konto?
         </Typography>
