@@ -30,6 +30,7 @@ const validationSchema = yup.object({
 
 
 function Form(props) {
+
   const [confirmation, setConfirmation] = useState(false);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -70,8 +71,6 @@ function Form(props) {
     setEmail('');
     setMessage('');
     setMember('');
-    
-
   };
 
   const handleClose = () => setConfirmation(false);
@@ -113,7 +112,7 @@ function Form(props) {
           Vad kan vi hjälpa dig med?
         </Typography>
         <Box
-          name="to_name"
+          name="formBox"
           component="form"
           ref={form}
           onSubmit={sendEmail}
@@ -129,7 +128,7 @@ function Form(props) {
               <FormControl fullWidth>
             <InputLabel
             id="memberSelectLabel"
-            name="to_name"
+            name="MemberSelectLabel"
             type="text"
             fullWidth
             sx={{

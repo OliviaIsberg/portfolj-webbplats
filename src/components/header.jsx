@@ -3,9 +3,20 @@ import { Link } from 'react-router-dom';
 import { Box } from '@mui/system';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
+import LoginForm from '../components/loginpagecomponents/loginform';
+import { Modal } from '@mui/material';
 
 function Header() {
   const [open, setOpen] = useState(false);
+
+  const [loginModal, setLoginModal] = useState(false);
+
+  const handleClose = () => setLoginModal(false);
+
+  const handleClick = () => {
+    console.log("open");
+    setLoginModal(true);
+  } 
 
   return (
     <>
@@ -41,7 +52,19 @@ function Header() {
               Kontakt
             </Link>
           </Box>
-          <button className="signInButton">Logga in</button>
+          <button className="signInButton" preventDefault onClick={() => handleClick()}>Logga in</button>
+          {loginModal && (
+            <Modal
+              open={loginModal}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+            >
+              <div className="confirmationMessage">
+                <LoginForm></LoginForm>
+              </div>
+            </Modal>
+          )}
         </div>
       </Box>
       <Box
