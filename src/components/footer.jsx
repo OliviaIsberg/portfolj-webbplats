@@ -50,6 +50,9 @@ function Footer() {
                 </Typography>
               </Link>
             </Grid>
+            <Grid item xs={12} sm={12} sx={{ textAlign: 'center' }}>
+              <Typography>Anders Personsgatan 18, 416 64 Göteborg</Typography>
+            </Grid>
           </Grid>
         </Container>
       </Box>
