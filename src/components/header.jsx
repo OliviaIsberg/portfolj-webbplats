@@ -2,6 +2,7 @@ import '../css/header.css';
 import { Link } from 'react-router-dom';
 import { Box } from '@mui/system';
 import MenuIcon from '@mui/icons-material/Menu';
+/* import LoginIcon from '@mui/icons-material/Login'; */
 import { useState } from 'react';
 import LoginForm from '../components/loginpagecomponents/loginform';
 import { Modal } from '@mui/material';
@@ -52,7 +53,7 @@ function Header() {
               Kontakt
             </Link>
           </Box>
-          <button className="signInButton" preventDefault onClick={() => handleClick()}>Logga in</button>
+          <button className="signInButton" preventDefault onClick={() => handleClick()}>Registrera/Logga in</button>
           {loginModal && (
             <Modal
               open={loginModal}
@@ -61,7 +62,7 @@ function Header() {
               aria-describedby="modal-modal-description"
             >
               <div className="confirmationMessage">
-                <LoginForm></LoginForm>
+                <LoginForm />
               </div>
             </Modal>
           )}

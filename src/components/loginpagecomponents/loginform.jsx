@@ -19,6 +19,8 @@ function LoginForm() {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
   const [register, setRegister] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [LastName, setLastName] = useState('');
 
   const handleSend = (event) => {
     event.preventDefault();
@@ -91,6 +93,58 @@ function LoginForm() {
         </Typography>
         <Box component="form" onSubmit={handleSend}>
           <Grid container spacing={2}>
+          <Grid item xs={12}>
+              <TextField
+                required
+                fullWidth
+                id="LastName"
+                label="Lastname"
+                name="LastName"
+                value={LastName}
+                onChange={(event) => setLastName(event.target.value)}
+                autoComplete="LastName"
+                InputLabelProps={{ className: 'textfield_label' }}
+                sx={{
+                  color: 'white',
+                  backgroundColor: 'black',
+                  border: '1px solid #23BE99',
+                  borderRadius: '20px',
+                  outline: 'none',
+                  input: { color: 'white' },
+                  inputLabel: { color: 'white' },
+                  textfield_label: { color: 'white' },
+                  '& .MuiOutlinedInput-notchedOutline': {
+                    border: 'none',
+                  },
+                }}
+              />
+            </Grid>
+          <Grid item xs={12}>
+              <TextField
+                required
+                fullWidth
+                id="firstName"
+                label="Firstname"
+                name="firstName"
+                value={firstName}
+                onChange={(event) => setFirstName(event.target.value)}
+                autoComplete="firstName"
+                InputLabelProps={{ className: 'textfield_label' }}
+                sx={{
+                  color: 'white',
+                  backgroundColor: 'black',
+                  border: '1px solid #23BE99',
+                  borderRadius: '20px',
+                  outline: 'none',
+                  input: { color: 'white' },
+                  inputLabel: { color: 'white' },
+                  textfield_label: { color: 'white' },
+                  '& .MuiOutlinedInput-notchedOutline': {
+                    border: 'none',
+                  },
+                }}
+              />
+            </Grid>
             <Grid item xs={12}>
               <TextField
                 required
@@ -170,7 +224,7 @@ function LoginForm() {
               }
             }}
           >
-            Register
+            Registrera
           </Button>
         </Box>
       </Box>
@@ -294,7 +348,7 @@ function LoginForm() {
               }
             }}
           >
-            Login
+            Logga in
           </Button>
         </Box>
       </Box>

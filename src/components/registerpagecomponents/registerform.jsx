@@ -8,7 +8,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
-function Form() {
+function RegisterForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -176,4 +176,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default RegisterForm;
