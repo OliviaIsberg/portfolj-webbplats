@@ -6,7 +6,7 @@ import { useState } from 'react';
 import LoginForm from './loginpagecomponents/loginform';
 import RegisterForm from './registerpagecomponents/registerform';
 
-function LoginModal() {
+function LoginModal(props) {
   const [register, setRegister] = useState(false);
 
   const toggleRegister = () => {
@@ -58,7 +58,11 @@ function LoginModal() {
         >
           {register ? 'Har du redan ett konto?' : 'Har du inget konto?'}
         </Typography>
-        {register ? <RegisterForm /> : <LoginForm />}
+        {register ? (
+          <RegisterForm handleClose={props.handleClose} />
+        ) : (
+          <LoginForm handleClose={props.handleClose} />
+        )}
       </Box>
     </Container>
   );

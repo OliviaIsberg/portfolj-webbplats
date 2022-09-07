@@ -7,29 +7,35 @@ import ContactPage from './pages/contactpage';
 import DeveloperPage from './pages/DeveloperPage';
 import DesignPage from './pages/DesignPage';
 import ScrumPage from './pages/ScrumPage';
-import LogInContextProvider from "./LogInContext";
+import LogInContextProvider from './LogInContext';
+import FakeDatabaseContextProvider from './FakeDatabaseContext';
 
 function App() {
   return (
-    <LogInContextProvider>
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<StartPage />}></Route>
-            <Route path="contact" element={<ContactPage />}></Route>
-            <Route path="contact/:name" element={<ContactPage />}></Route>
-            <Route path="skills">
-              <Route index element={<SkillsPage />}></Route>
-              <Route path="DeveloperPage" element={<DeveloperPage />}></Route>
-              <Route path="DesignPage" element={<DesignPage />}></Route>
-              <Route path="ScrumPage" element={<ScrumPage />}></Route>
-            </Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
-    </LogInContextProvider>
+    <FakeDatabaseContextProvider>
+      <LogInContextProvider>
+        <div className="App">
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<StartPage />}></Route>
+                <Route path="contact" element={<ContactPage />}></Route>
+                <Route path="contact/:name" element={<ContactPage />}></Route>
+                <Route path="skills">
+                  <Route index element={<SkillsPage />}></Route>
+                  <Route
+                    path="DeveloperPage"
+                    element={<DeveloperPage />}
+                  ></Route>
+                  <Route path="DesignPage" element={<DesignPage />}></Route>
+                  <Route path="ScrumPage" element={<ScrumPage />}></Route>
+                </Route>
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </div>
+      </LogInContextProvider>
+    </FakeDatabaseContextProvider>
   );
 }
 

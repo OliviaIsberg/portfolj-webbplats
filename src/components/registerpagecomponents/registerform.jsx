@@ -3,60 +3,47 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-/* import { useState } from 'react'; */
-import { createUser } from '../../api';
+import { FakeDatabaseContext } from '../../FakeDatabaseContext';
+import { useContext, useState, useRef, useEffect } from 'react';
 
 const validationSchema = yup.object({
   password: yup.string().required('Vänligen skriv ditt lösenord').min(5),
   firstName: yup.string().required('Vänligen skriv ditt lösenord').min(1),
-  LastName: yup.string().required('Vänligen skriv ditt lösenord').min(1),
+  lastName: yup.string().required('Vänligen skriv ditt lösenord').min(1),
   email: yup.string().email().required('Ange en giltig e-post'),
   // firstName: yup.string().firstName().required().min(1),
   // LastName: yup.string().LastName().required('Ange ett efternamn').min(1),
 });
 
-function RegisterForm() {
-  
+function RegisterForm(props) {
+  const { registerUser } = useContext(FakeDatabaseContext);
+  const [registerError, setRegisterError] = useState(null);
+  const handleClose = props.handleClose;
+  const lastNameInput = useRef();
 
- /*  const handleSend = (event) => {
-    event.preventDefault();
-    formik.handleSubmit(event); */
-    // handleSubmit();
-    // alert('logged in / registered');
-  //};
-
-  // const handleSubmit = () => {
-  //   setFirstName('');
-  //   setLastName('');
-  //   setEmail('');
-  //   setPassword('');
-  // };
+  useEffect(() => {
+    lastNameInput.current.focus();
+  }, []);
 
   const formik = useFormik({
     initialValues: {
       firstName: '',
-      LastName: '',
+      lastName: '',
       password: '',
       email: '',
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      let user = {
-        email: values.email,
-        password: values.password,
-        LastName: values.LastName,
-        firstName: values.firstName
+      try {
+        registerUser(values);
+        handleClose();
+      } catch (e) {
+        setRegisterError(e.message);
       }
-     /*  setFirstName('');
-      setLastName('');
-      setEmail('');
-      setPassword(''); */
-    
-    createUser(user)
-    console.log(user)
-  },
+    },
   });
 
   return (
@@ -64,12 +51,13 @@ function RegisterForm() {
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <TextField
+            inputRef={lastNameInput}
             required
             fullWidth
-            id="LastName"
+            id="lastName"
             label="Lastname"
-            name="LastName"
-            value={formik.values.LastName}
+            name="lastName"
+            value={formik.values.lastName}
             onFocus={formik.handleBlur}
             onChange={formik.handleChange}
             // onChange={formik.handleChange}
@@ -78,7 +66,7 @@ function RegisterForm() {
             sx={{
               color: 'white',
               backgroundColor: 'black',
-              border: !(formik.touched.LastName && formik.errors.LastName)
+              border: !(formik.touched.lastName && formik.errors.lastName)
                 ? '1px solid #23BE99'
                 : '1px solid #FF0000',
               borderRadius: '20px',
@@ -213,14 +201,12 @@ function RegisterForm() {
         </Grid>
       </Grid>
       <Button
-        onClick={() =>
-      ({
-            firstname: formik.values.firstName,
-            lastname: formik.values.LastName,
-            email: formik.values.email,
-            password: formik.values.password,
-          })
-        }
+        onClick={() => ({
+          firstname: formik.values.firstName,
+          lastname: formik.values.LastName,
+          email: formik.values.email,
+          password: formik.values.password,
+        })}
         type="submit"
         fullWidth
         variant="contained"
@@ -245,6 +231,9 @@ function RegisterForm() {
       >
         Registrera
       </Button>
+      {registerError ? (
+        <Typography sx={{ color: 'red' }}>{registerError}</Typography>
+      ) : null}
     </Box>
   );
 }

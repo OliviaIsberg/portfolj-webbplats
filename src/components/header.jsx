@@ -9,13 +9,10 @@ import { Modal } from '@mui/material';
 import LoginModal from './loginmodal';
 import { LogInContext } from '../LogInContext';
 
-
 function Header() {
-  const { loggedInUser, setLoggedInUser } = useContext(LogInContext);
-  
+  const { loggedInUser, logoutUser } = useContext(LogInContext);
 
   const [open, setOpen] = useState(false);
-
 
   const [loginModal, setLoginModal] = useState(false);
 
@@ -27,10 +24,9 @@ function Header() {
   };
 
   const handleLogOut = () => {
-    setLoginModal(false)
-    setLoggedInUser(false)
-  }
-
+    setLoginModal(false);
+    logoutUser();
+  };
 
   return (
     <>
@@ -66,12 +62,27 @@ function Header() {
               Kontakt
             </Link>
           </Box>
-          {!loggedInUser ? 
-          ( <><button className="signInButton" preventDefault onClick={() => handleClick()}>Logga in</button></>
-          )
-        : (
-          <><button className="signInButton" preventDefault onClick={() => handleLogOut()}>Logga ut</button></>
-        )}
+          {!loggedInUser ? (
+            <>
+              <button
+                className="signInButton"
+                preventDefault
+                onClick={() => handleClick()}
+              >
+                Logga in
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                className="signInButton"
+                preventDefault
+                onClick={() => handleLogOut()}
+              >
+                Logga ut
+              </button>
+            </>
+          )}
           {loginModal && (
             <Modal
               open={loginModal}
@@ -81,7 +92,7 @@ function Header() {
             >
               <div className="confirmationMessage">
                 {/* <LoginForm /> */}
-                <LoginModal />
+                <LoginModal handleClose={handleClose} />
               </div>
             </Modal>
           )}
