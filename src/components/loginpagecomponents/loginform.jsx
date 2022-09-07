@@ -1,38 +1,27 @@
-import React from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import { useContext } from 'react';
-import { login } from '../../api';
+import { useContext, useEffect, useState, useRef } from 'react';
 import { LogInContext } from '../../LogInContext';
+import { Typography } from '@mui/material';
 
 const validationSchema = yup.object({
   password: yup.string().required('Vänligen skriv ditt lösenord').min(5),
   email: yup.string().email().required('Ange en giltig e-post'),
 });
 
-function LoginForm() {
-  /* const [password, setPassword] = useState('');
-  const [email, setEmail] = useState(''); */
-  const { setLoggedInUser } = useContext(LogInContext);
+function LoginForm(props) {
+  const handleClose = props.handleClose;
+  const { loginUser } = useContext(LogInContext);
+  const [loginError, setLoginError] = useState(null);
+  const emailInput = useRef();
 
-  const loginUser = (user) =>
-
-  login(formik.values.email, formik.values.password).then((response) =>
-
-    localStorage.getItem('user', JSON.stringify(formik.values))
-
-  );
-
- /*  const handleSend = (event) => {
-    event.preventDefault();
-    formik.handleSubmit(event); */
-    // handleSubmit();
-    // alert('logged in / registered');
-  //};
+  useEffect(() => {
+    emailInput.current.focus();
+  }, []);
 
   const formik = useFormik({
     initialValues: {
@@ -41,24 +30,21 @@ function LoginForm() {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      const user = {
-        email: values.email,
-        password: values.password,
+      try {
+        const user = loginUser(values.email, values.password);
+        handleClose();
+      } catch (e) {
+        setLoginError(e.message);
       }
-      // alert(JSON.stringify(values, null, 2));
-     /*  setEmail('');
-      setPassword(''); */
-      loginUser(user)
-      setLoggedInUser(true)
     },
   });
-
 
   return (
     <Box component="form" onSubmit={formik.handleSubmit}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <TextField
+            inputRef={emailInput}
             required
             fullWidth
             id="email"
@@ -125,7 +111,6 @@ function LoginForm() {
         </Grid>
       </Grid>
       <Button
-        onClick={() => loginUser()}
         type="submit"
         fullWidth
         variant="contained"
@@ -150,6 +135,9 @@ function LoginForm() {
       >
         Logga in
       </Button>
+      {loginError ? (
+        <Typography sx={{ color: 'red' }}>{loginError}</Typography>
+      ) : null}
     </Box>
   );
 }
