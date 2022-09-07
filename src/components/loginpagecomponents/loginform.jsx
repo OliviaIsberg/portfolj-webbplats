@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { login } from '../../api';
 import { LogInContext } from '../../LogInContext';
 
@@ -15,11 +15,11 @@ const validationSchema = yup.object({
 });
 
 function LoginForm() {
-  const [password, setPassword] = useState('');
-  const [email, setEmail] = useState('');
-  const { loggedInUser, setLoggedInUser } = useContext(LogInContext);
+  /* const [password, setPassword] = useState('');
+  const [email, setEmail] = useState(''); */
+  const { setLoggedInUser } = useContext(LogInContext);
 
-  const loginUser = () =>
+  const loginUser = (user) =>
 
   login(formik.values.email, formik.values.password).then((response) =>
 
@@ -27,12 +27,12 @@ function LoginForm() {
 
   );
 
-  const handleSend = (event) => {
+ /*  const handleSend = (event) => {
     event.preventDefault();
-    formik.handleSubmit(event);
+    formik.handleSubmit(event); */
     // handleSubmit();
     // alert('logged in / registered');
-  };
+  //};
 
   const formik = useFormik({
     initialValues: {
@@ -41,9 +41,14 @@ function LoginForm() {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
+      const user = {
+        email: values.email,
+        password: values.password,
+      }
       // alert(JSON.stringify(values, null, 2));
-      setEmail('');
-      setPassword('');
+     /*  setEmail('');
+      setPassword(''); */
+      loginUser(user)
       setLoggedInUser(true)
     },
   });

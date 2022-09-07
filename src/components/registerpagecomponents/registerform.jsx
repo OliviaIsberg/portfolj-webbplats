@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import { useState } from 'react';
+/* import { useState } from 'react'; */
 import { createUser } from '../../api';
 
 const validationSchema = yup.object({
@@ -18,27 +18,14 @@ const validationSchema = yup.object({
 });
 
 function RegisterForm() {
-  const [password, setPassword] = useState('');
-  const [email, setEmail] = useState('');
-  const [firstName, setFirstName] = useState('');
-  const [LastName, setLastName] = useState('');
-
-  /* const saveNewUser = (user) => 
-  createUser(
-    formik.values.password,
-    formik.values.email,
-    formik.values.firstName,
-    formik.values.LastName).then((response) => console.log(response) */
   
 
-  
-
-  const handleSend = (event) => {
+ /*  const handleSend = (event) => {
     event.preventDefault();
-    formik.handleSubmit(event);
+    formik.handleSubmit(event); */
     // handleSubmit();
     // alert('logged in / registered');
-  };
+  //};
 
   // const handleSubmit = () => {
   //   setFirstName('');
@@ -227,11 +214,11 @@ function RegisterForm() {
       </Grid>
       <Button
         onClick={() =>
-          /* saveNewUser */({
-            firstname: firstName,
-            lastname: LastName,
-            email: email,
-            password: password,
+      ({
+            firstname: formik.values.firstName,
+            lastname: formik.values.LastName,
+            email: formik.values.email,
+            password: formik.values.password,
           })
         }
         type="submit"

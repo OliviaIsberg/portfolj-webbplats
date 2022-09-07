@@ -4,7 +4,7 @@ import { Box } from '@mui/system';
 import MenuIcon from '@mui/icons-material/Menu';
 /* import LoginIcon from '@mui/icons-material/Login'; */
 import { useState, useContext } from 'react';
-import LoginForm from '../components/loginpagecomponents/loginform';
+/* import LoginForm from '../components/loginpagecomponents/loginform'; */
 import { Modal } from '@mui/material';
 import LoginModal from './loginmodal';
 import { LogInContext } from '../LogInContext';
