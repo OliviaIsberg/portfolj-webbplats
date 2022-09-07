@@ -54,13 +54,7 @@ function Header() {
               Kontakt
             </Link>
           </Box>
-          <button
-            className="signInButton"
-            preventDefault
-            onClick={() => handleClick()}
-          >
-            Registrera/Logga in
-          </button>
+          <button className="signInButton" preventDefault onClick={() => handleClick()}>Logga in</button>
           {loginModal && (
             <Modal
               open={loginModal}
