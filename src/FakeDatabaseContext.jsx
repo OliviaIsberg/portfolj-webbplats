@@ -6,7 +6,7 @@ const FakeDatabaseContextProvider = ({ children }) => {
   function registerUser(user) {
     const users = JSON.parse(localStorage.getItem('users')) ?? [];
     const isAvailable = !users.some(
-      (x) => x.email.toLowerCase() == user.email.toLowerCase()
+      (x) => x.email.toLowerCase() === user.email.toLowerCase()
     );
     if (!isAvailable) {
       throw new Error('Användare med angiven epostadress existerar redan');
@@ -20,8 +20,8 @@ const FakeDatabaseContextProvider = ({ children }) => {
     const users = JSON.parse(localStorage.getItem('users')) ?? [];
     const user = users.find(
       (user) =>
-        user.email.toLowerCase() == email.toLowerCase() &&
-        user.password == password
+        user.email.toLowerCase() === email.toLowerCase() &&
+        user.password === password
     );
     return user
       ? {

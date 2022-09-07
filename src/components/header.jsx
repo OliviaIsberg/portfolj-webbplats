@@ -10,8 +10,7 @@ import LoginModal from './loginmodal';
 import { LogInContext } from '../LogInContext';
 
 function Header() {
-  const { loggedInUser, setLoggedInUser, logoutUser } =
-    useContext(LogInContext);
+  const { loggedInUser, logoutUser } = useContext(LogInContext);
 
   const [open, setOpen] = useState(false);
 

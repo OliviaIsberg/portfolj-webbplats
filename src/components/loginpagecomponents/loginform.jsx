@@ -31,7 +31,7 @@ function LoginForm(props) {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       try {
-        const user = loginUser(values.email, values.password);
+        loginUser(values.email, values.password);
         handleClose();
       } catch (e) {
         setLoginError(e.message);
