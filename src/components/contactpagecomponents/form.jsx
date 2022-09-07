@@ -171,7 +171,7 @@ function Form(props) {
                 fullWidth
                 id="firstName"
                 label="First Name"
-                inputProps={{maxLength: 20}}
+                inputProps={{maxLength: 50}}
                 autoFocus
                 onChange={(event) => setFirstName(event.target.value)}
                 value={firstName}
@@ -203,7 +203,7 @@ function Form(props) {
                 name="user_name"
                 id="lastName"
                 label="Last Name"
-                inputProps={{maxLength: 20}}
+                inputProps={{maxLength: 50}}
                 autoComplete="family-name"
                 onChange={(event) => setLastName(event.target.value)}
                 value={lastName}
@@ -229,7 +229,7 @@ function Form(props) {
                 type="email"
                 name="user_email"
                 label="Email Address"
-                inputProps={{maxLength: 20}}
+                inputProps={{maxLength: 50}}
                 autoComplete="email"
                 onChange={(event) => setEmail(event.target.value)}
                 value={email}
@@ -262,7 +262,7 @@ function Form(props) {
                 InputLabelProps={{ className: 'textfield_label' }}
                 multiline
                 rows={4}
-                inputProps={{ style: { color: 'white' }, maxLength: 100  }}
+                inputProps={{ style: { color: 'white' }, maxLength: 1000  }}
                 sx={{
                   color: 'white!important',
                   backgroundColor: 'black',
