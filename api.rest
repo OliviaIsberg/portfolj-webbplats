@@ -7,5 +7,5 @@ POST http://localhost:5000/api/user/
 Content-Type: application/json
 
 {
-"firstname": "Olivia", "lastname": "Isberg", "email": "oliviaisberg@gmail.com", "password": "hejsan"
+"firstname": "Hej", "lastname": "Isberg", "email": "hej@gmail.com", "password": "hejsan"
 }

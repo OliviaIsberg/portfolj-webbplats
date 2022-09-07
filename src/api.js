@@ -1,22 +1,22 @@
 export const createUser = (user) =>
-  fetch('http://localhost:5000/api/user/', {
+  fetch('http://localhost:4000/api/user/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      firstname: user.firstname,
-      lastname: user.lastname,
+      firstname: user.firstName,
+      lastname: user.LastName,
       email: user.email,
       password: user.password,
     }),
   }).then((response) => response.json());
 
 export const getUser = (id) =>
-  fetch('http://localhost:5000/api/users/' + id).then((response) =>
+  fetch('http://localhost:4000/api/users/' + id).then((response) =>
     response.json()
   );
 
 export const login = (email, password) =>
-  fetch('http://localhost:5000/api/login/', {
+  fetch('http://localhost:4000/api/login/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
