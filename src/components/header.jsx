@@ -6,6 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
 import LoginForm from '../components/loginpagecomponents/loginform';
 import { Modal } from '@mui/material';
+import LoginModal from './loginmodal';
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -15,9 +16,9 @@ function Header() {
   const handleClose = () => setLoginModal(false);
 
   const handleClick = () => {
-    console.log("open");
+    console.log('open');
     setLoginModal(true);
-  } 
+  };
 
   return (
     <>
@@ -62,7 +63,8 @@ function Header() {
               aria-describedby="modal-modal-description"
             >
               <div className="confirmationMessage">
-                <LoginForm />
+                {/* <LoginForm /> */}
+                <LoginModal />
               </div>
             </Modal>
           )}
