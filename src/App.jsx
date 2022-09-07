@@ -7,9 +7,11 @@ import ContactPage from './pages/contactpage';
 import DeveloperPage from './pages/DeveloperPage';
 import DesignPage from './pages/DesignPage';
 import ScrumPage from './pages/ScrumPage';
+import LogInContextProvider from "./LogInContext";
 
 function App() {
   return (
+    <LogInContextProvider>
     <div className="App">
       <BrowserRouter>
         <Routes>
@@ -27,6 +29,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+    </LogInContextProvider>
   );
 }
 

@@ -23,13 +23,15 @@ function RegisterForm() {
   const [firstName, setFirstName] = useState('');
   const [LastName, setLastName] = useState('');
 
-  const saveNewUser = (user) =>
-    createUser(
-      formik.values.password,
-      formik.values.email,
-      formik.values.firstName,
-      formik.values.LastName.then((response) => console.log(response))
-    );
+  /* const saveNewUser = (user) => 
+  createUser(
+    formik.values.password,
+    formik.values.email,
+    formik.values.firstName,
+    formik.values.LastName).then((response) => console.log(response) */
+  
+
+  
 
   const handleSend = (event) => {
     event.preventDefault();
@@ -54,11 +56,20 @@ function RegisterForm() {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      setFirstName('');
+      let user = {
+        email: values.email,
+        password: values.password,
+        LastName: values.LastName,
+        firstName: values.firstName
+      }
+     /*  setFirstName('');
       setLastName('');
       setEmail('');
-      setPassword('');
-    },
+      setPassword(''); */
+    
+    createUser(user)
+    console.log(user)
+  },
   });
 
   return (
@@ -216,7 +227,7 @@ function RegisterForm() {
       </Grid>
       <Button
         onClick={() =>
-          saveNewUser({
+          /* saveNewUser */({
             firstname: firstName,
             lastname: LastName,
             email: email,

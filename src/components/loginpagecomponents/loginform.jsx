@@ -5,8 +5,9 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { login } from '../../api';
+import { LogInContext } from '../../LogInContext';
 
 const validationSchema = yup.object({
   password: yup.string().required('Vänligen skriv ditt lösenord').min(5),
@@ -16,11 +17,15 @@ const validationSchema = yup.object({
 function LoginForm() {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
+  const { loggedInUser, setLoggedInUser } = useContext(LogInContext);
 
   const loginUser = () =>
-    login(formik.values.email, formik.values.password).then((response) =>
-      console.log(response)
-    );
+
+  login(formik.values.email, formik.values.password).then((response) =>
+
+    localStorage.getItem('user', JSON.stringify(formik.values))
+
+  );
 
   const handleSend = (event) => {
     event.preventDefault();
@@ -39,8 +44,10 @@ function LoginForm() {
       // alert(JSON.stringify(values, null, 2));
       setEmail('');
       setPassword('');
+      setLoggedInUser(true)
     },
   });
+
 
   return (
     <Box component="form" onSubmit={formik.handleSubmit}>

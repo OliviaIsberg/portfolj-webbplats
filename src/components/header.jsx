@@ -3,13 +3,19 @@ import { Link } from 'react-router-dom';
 import { Box } from '@mui/system';
 import MenuIcon from '@mui/icons-material/Menu';
 /* import LoginIcon from '@mui/icons-material/Login'; */
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import LoginForm from '../components/loginpagecomponents/loginform';
 import { Modal } from '@mui/material';
 import LoginModal from './loginmodal';
+import { LogInContext } from '../LogInContext';
+
 
 function Header() {
+  const { loggedInUser, setLoggedInUser } = useContext(LogInContext);
+  
+
   const [open, setOpen] = useState(false);
+
 
   const [loginModal, setLoginModal] = useState(false);
 
@@ -19,6 +25,12 @@ function Header() {
     console.log('open');
     setLoginModal(true);
   };
+
+  const handleLogOut = () => {
+    setLoginModal(false)
+    setLoggedInUser(false)
+  }
+
 
   return (
     <>
@@ -54,7 +66,12 @@ function Header() {
               Kontakt
             </Link>
           </Box>
-          <button className="signInButton" preventDefault onClick={() => handleClick()}>Logga in</button>
+          {!loggedInUser ? 
+          ( <><button className="signInButton" preventDefault onClick={() => handleClick()}>Logga in</button></>
+          )
+        : (
+          <><button className="signInButton" preventDefault onClick={() => handleLogOut()}>Logga ut</button></>
+        )}
           {loginModal && (
             <Modal
               open={loginModal}
