@@ -11,15 +11,10 @@ Our application is called "Agili". It is a website promoting us as a digital age
 
 To run the application please follow these steps: <br>
 
-1. `cd src` <br>
-2. `npm i` <br>
-3. `npm start`
+1. `npm i` <br>
+2. `npm start`
 
-Open another terminal and type: <br>
-
-1. `cd server` <br>
-2. `npm i` <br>
-3. `npm start` <br> <br>
+### [Agili on Netlify](https://agili.netlify.app/) 
 
 ### The contributors:
 
