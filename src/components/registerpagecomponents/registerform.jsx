@@ -55,7 +55,7 @@ function RegisterForm(props) {
             required
             fullWidth
             id="lastName"
-            label="Lastname"
+            label="Efternamn"
             name="lastName"
             value={formik.values.lastName}
             onFocus={formik.handleBlur}
@@ -92,7 +92,7 @@ function RegisterForm(props) {
             required
             fullWidth
             id="firstName"
-            label="Firstname"
+            label="Förnamn"
             name="firstName"
             value={formik.values.firstName}
             onFocus={formik.handleBlur}
@@ -129,7 +129,7 @@ function RegisterForm(props) {
             required
             fullWidth
             id="email"
-            label="Email Address"
+            label="Email"
             name="email"
             value={formik.values.email}
             autoComplete="email"
@@ -167,7 +167,7 @@ function RegisterForm(props) {
             required
             fullWidth
             id="password"
-            label="Password"
+            label="Lösenord"
             name="password"
             value={formik.values.password}
             onFocus={formik.handleBlur}
