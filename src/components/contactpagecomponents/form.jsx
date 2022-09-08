@@ -14,8 +14,8 @@ import { useState } from 'react';
 import { Modal } from '@mui/material';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
-import { useFormik } from "formik";
-import * as yup from "yup";
+import { useFormik } from 'formik';
+import * as yup from 'yup';
 
 const validationSchema = yup.object({
   member: yup.string().required('Välj en kontaktperson'),
@@ -28,9 +28,7 @@ const validationSchema = yup.object({
   message: yup.string().required('Skriv ett meddellande!').min(4),
 });
 
-
 function Form(props) {
-
   const [confirmation, setConfirmation] = useState(false);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -94,7 +92,7 @@ function Form(props) {
   });
 
   return (
-    <Container component="main" maxWidth="xs" sx={{ marginBottom: '8.5rem' }}>
+    <Container component="main" maxWidth="xs" sx={{ marginBottom: '3rem' }}>
       <Box
         sx={{
           marginTop: 8,
@@ -126,41 +124,41 @@ function Form(props) {
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <FormControl fullWidth>
-            <InputLabel
-            id="memberSelectLabel"
-            name="MemberSelectLabel"
-            type="text"
-            fullWidth
-            sx={{
-              color: 'white',
-            }}
-          >
-            Member
-          </InputLabel>
-          <Select
-            required
-            fullWidth
-            labelId="memberSelectLabel"
-            id="memberSelect"
-            value={member}
-            label="Member"
-            onChange={handleChange}
-            sx={{
-              color: 'white',
-              backgroundColor: 'black',
-              border: '1px solid #23BE99',
-              borderRadius: '20px',
-              outline: 'none',
-            }}
-          >
-            <MenuItem value={'simon'}>Simon Eriksson</MenuItem>
-            <MenuItem value={'sara'}>Sara Lindqvist</MenuItem>
-            <MenuItem value={'olivia'}>Olivia Isberg</MenuItem>
-            <MenuItem value={'max'}>Max Andersson</MenuItem>
-            <MenuItem value={'anna'}>Anna Özmehak</MenuItem>
-            <MenuItem value={'rosanna'}>Rosanna Pistone</MenuItem>
-          </Select>
-          </FormControl>
+                <InputLabel
+                  id="memberSelectLabel"
+                  name="MemberSelectLabel"
+                  type="text"
+                  fullWidth
+                  sx={{
+                    color: 'white',
+                  }}
+                >
+                  Person
+                </InputLabel>
+                <Select
+                  required
+                  fullWidth
+                  labelId="memberSelectLabel"
+                  id="memberSelect"
+                  value={member}
+                  label="Medlem"
+                  onChange={handleChange}
+                  sx={{
+                    color: 'white',
+                    backgroundColor: 'black',
+                    border: '1px solid #23BE99',
+                    borderRadius: '20px',
+                    outline: 'none',
+                  }}
+                >
+                  <MenuItem value={'simon'}>Simon Eriksson</MenuItem>
+                  <MenuItem value={'sara'}>Sara Lindqvist</MenuItem>
+                  <MenuItem value={'olivia'}>Olivia Isberg</MenuItem>
+                  <MenuItem value={'max'}>Max Andersson</MenuItem>
+                  <MenuItem value={'anna'}>Anna Özmehak</MenuItem>
+                  <MenuItem value={'rosanna'}>Rosanna Pistone</MenuItem>
+                </Select>
+              </FormControl>
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -170,8 +168,8 @@ function Form(props) {
                 required
                 fullWidth
                 id="firstName"
-                label="First Name"
-                inputProps={{maxLength: 50}}
+                label="Förnamn"
+                inputProps={{ maxLength: 50 }}
                 autoFocus
                 onChange={(event) => setFirstName(event.target.value)}
                 value={firstName}
@@ -202,8 +200,8 @@ function Form(props) {
                 type="text"
                 name="user_name"
                 id="lastName"
-                label="Last Name"
-                inputProps={{maxLength: 50}}
+                label="Efternamn"
+                inputProps={{ maxLength: 50 }}
                 autoComplete="family-name"
                 onChange={(event) => setLastName(event.target.value)}
                 value={lastName}
@@ -228,8 +226,8 @@ function Form(props) {
                 id="email"
                 type="email"
                 name="user_email"
-                label="Email Address"
-                inputProps={{maxLength: 50}}
+                label="Email"
+                inputProps={{ maxLength: 50 }}
                 autoComplete="email"
                 onChange={(event) => setEmail(event.target.value)}
                 value={email}
@@ -254,7 +252,7 @@ function Form(props) {
                 required
                 fullWidth
                 id="message"
-                label="Message"
+                label="Meddelande"
                 name="message"
                 autoComplete="message.."
                 onChange={(event) => setMessage(event.target.value)}
@@ -262,7 +260,7 @@ function Form(props) {
                 InputLabelProps={{ className: 'textfield_label' }}
                 multiline
                 rows={4}
-                inputProps={{ style: { color: 'white' }, maxLength: 1000  }}
+                inputProps={{ style: { color: 'white' }, maxLength: 1000 }}
                 sx={{
                   color: 'white!important',
                   backgroundColor: 'black',
@@ -301,7 +299,7 @@ function Form(props) {
               },
             }}
           >
-            Contact Member
+            Kontakta
           </Button>
           {confirmation && (
             <Modal

@@ -48,7 +48,7 @@ function LoginForm(props) {
             required
             fullWidth
             id="email"
-            label="Email Address"
+            label="Email"
             name="email"
             value={formik.values.email}
             autoComplete="email"
@@ -85,7 +85,7 @@ function LoginForm(props) {
             required
             fullWidth
             id="password"
-            label="Password"
+            label="Lösenord"
             name="password"
             value={formik.values.password}
             onFocus={formik.handleBlur}
